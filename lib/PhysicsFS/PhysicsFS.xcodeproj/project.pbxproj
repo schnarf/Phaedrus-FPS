@@ -1,0 +1,1750 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 42;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              D73570D73570D73570000000 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = D6DA60D6DA60D6DA60000000 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            D73740D73740D73740000000 /* CMake ReRun */,
+                            D74050D74050D74050000000 /* CMake Rules */,
+                     );
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                            DDA830DDA830DDA830000000 /* PBXTargetDependency */,
+                            DDAF40DDAF40DDAF40000000 /* PBXTargetDependency */,
+                            DDB700DDB700DDB700000000 /* PBXTargetDependency */,
+                            DDBE70DDBE70DDBE70000000 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              D7F800D7F800D7F800000000 /* dist */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = D807F0D807F0D807F0000000 /* Build configuration list for PBXAggregateTarget "dist" */;
+                     buildPhases = (
+                            D7F9E0D7F9E0D7F9E0000000 /* CMake ReRun */,
+                            D7FFE0D7FFE0D7FFE0000000 /* CMake Rules */,
+                     );
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                     );
+                     name = dist;
+                     productName = dist;
+              };
+              D87AF0D87AF0D87AF0000000 /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = D88D60D88D60D88D60000000 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            D87C90D87C90D87C90000000 /* CMake ReRun */,
+                            D88280D88280D88280000000 /* CMake PostBuild Rules */,
+                     );
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                            DDC810DDC810DDC810000000 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+D8F690D8F690D8F690000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */ = {isa = PBXBuildFile; fileRef = D8F310D8F310D8F310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */; settings = { COMPILER_FLAGS = ""; }; };
+D90160D90160D90160000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */ = {isa = PBXBuildFile; fileRef = D8FDF0D8FDF0D8FDF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */; settings = { COMPILER_FLAGS = ""; }; };
+D910C0D910C0D910C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */ = {isa = PBXBuildFile; fileRef = D908C0D908C0D908C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */; settings = { COMPILER_FLAGS = ""; }; };
+D91720D91720D91720000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */ = {isa = PBXBuildFile; fileRef = D913A0D913A0D913A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */; settings = { COMPILER_FLAGS = ""; }; };
+D92660D92660D92660000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */ = {isa = PBXBuildFile; fileRef = D91E80D91E80D91E80000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */; settings = { COMPILER_FLAGS = ""; }; };
+D92D10D92D10D92D10000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */ = {isa = PBXBuildFile; fileRef = D92940D92940D92940000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */; settings = { COMPILER_FLAGS = ""; }; };
+D93C20D93C20D93C20000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */ = {isa = PBXBuildFile; fileRef = D93440D93440D93440000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */; settings = { COMPILER_FLAGS = ""; }; };
+D942B0D942B0D942B0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */ = {isa = PBXBuildFile; fileRef = D93F00D93F00D93F00000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */; settings = { COMPILER_FLAGS = ""; }; };
+D94D90D94D90D94D90000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */ = {isa = PBXBuildFile; fileRef = D949E0D949E0D949E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */; settings = { COMPILER_FLAGS = ""; }; };
+D958C0D958C0D958C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */ = {isa = PBXBuildFile; fileRef = D954F0D954F0D954F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */; settings = { COMPILER_FLAGS = ""; }; };
+D967D0D967D0D967D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */ = {isa = PBXBuildFile; fileRef = D95FF0D95FF0D95FF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */; settings = { COMPILER_FLAGS = ""; }; };
+D96E60D96E60D96E60000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */ = {isa = PBXBuildFile; fileRef = D96AB0D96AB0D96AB0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */; settings = { COMPILER_FLAGS = ""; }; };
+D97D70D97D70D97D70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */ = {isa = PBXBuildFile; fileRef = D97590D97590D97590000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */; settings = { COMPILER_FLAGS = ""; }; };
+D98400D98400D98400000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */ = {isa = PBXBuildFile; fileRef = D98050D98050D98050000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */; settings = { COMPILER_FLAGS = ""; }; };
+D99310D99310D99310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */ = {isa = PBXBuildFile; fileRef = D98B30D98B30D98B30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */; settings = { COMPILER_FLAGS = ""; }; };
+D999A0D999A0D999A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */ = {isa = PBXBuildFile; fileRef = D995F0D995F0D995F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9A900D9A900D9A900000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */ = {isa = PBXBuildFile; fileRef = D9A0D0D9A0D0D9A0D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9AFC0D9AFC0D9AFC0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */ = {isa = PBXBuildFile; fileRef = D9AC30D9AC30D9AC30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9B8B0D9B8B0D9B8B0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */ = {isa = PBXBuildFile; fileRef = D9B6E0D9B6E0D9B6E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9C390D9C390D9C390000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */ = {isa = PBXBuildFile; fileRef = D9C1C0D9C1C0D9C1C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9CE70D9CE70D9CE70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */ = {isa = PBXBuildFile; fileRef = D9CCA0D9CCA0D9CCA0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9D950D9D950D9D950000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */ = {isa = PBXBuildFile; fileRef = D9D780D9D780D9D780000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9E430D9E430D9E430000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */ = {isa = PBXBuildFile; fileRef = D9E260D9E260D9E260000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9EF10D9EF10D9EF10000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */ = {isa = PBXBuildFile; fileRef = D9ED40D9ED40D9ED40000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9F9F0D9F9F0D9F9F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */ = {isa = PBXBuildFile; fileRef = D9F820D9F820D9F820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */; settings = { COMPILER_FLAGS = ""; }; };
+DA0460DA0460DA0460000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */ = {isa = PBXBuildFile; fileRef = DA0300DA0300DA0300000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */; settings = { COMPILER_FLAGS = ""; }; };
+DA0FE0DA0FE0DA0FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */ = {isa = PBXBuildFile; fileRef = DA0E70DA0E70DA0E70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */; settings = { COMPILER_FLAGS = ""; }; };
+DA1B10DA1B10DA1B10000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */ = {isa = PBXBuildFile; fileRef = DA19A0DA19A0DA19A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */; settings = { COMPILER_FLAGS = ""; }; };
+DA26E0DA26E0DA26E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+DAD5A0DAD5A0DAD5A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */ = {isa = PBXBuildFile; fileRef = D8F310D8F310D8F310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */; settings = { COMPILER_FLAGS = ""; }; };
+DADB70DADB70DADB70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */ = {isa = PBXBuildFile; fileRef = D8FDF0D8FDF0D8FDF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */; settings = { COMPILER_FLAGS = ""; }; };
+DAE820DAE820DAE820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */ = {isa = PBXBuildFile; fileRef = D908C0D908C0D908C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */; settings = { COMPILER_FLAGS = ""; }; };
+DAED30DAED30DAED30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */ = {isa = PBXBuildFile; fileRef = D913A0D913A0D913A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */; settings = { COMPILER_FLAGS = ""; }; };
+DAF2C0DAF2C0DAF2C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */ = {isa = PBXBuildFile; fileRef = D91E80D91E80D91E80000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */; settings = { COMPILER_FLAGS = ""; }; };
+DAFFD0DAFFD0DAFFD0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */ = {isa = PBXBuildFile; fileRef = D92940D92940D92940000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB07A0DB07A0DB07A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */ = {isa = PBXBuildFile; fileRef = D93440D93440D93440000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB0A90DB0A90DB0A90000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */ = {isa = PBXBuildFile; fileRef = D93F00D93F00D93F00000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB11C0DB11C0DB11C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */ = {isa = PBXBuildFile; fileRef = D949E0D949E0D949E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB1F30DB1F30DB1F30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */ = {isa = PBXBuildFile; fileRef = D954F0D954F0D954F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB2700DB2700DB2700000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */ = {isa = PBXBuildFile; fileRef = D95FF0D95FF0D95FF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB2ED0DB2ED0DB2ED0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */ = {isa = PBXBuildFile; fileRef = D96AB0D96AB0D96AB0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB3680DB3680DB3680000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */ = {isa = PBXBuildFile; fileRef = D97590D97590D97590000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB3E50DB3E50DB3E50000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */ = {isa = PBXBuildFile; fileRef = D98050D98050D98050000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB4620DB4620DB4620000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */ = {isa = PBXBuildFile; fileRef = D98B30D98B30D98B30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB4DF0DB4DF0DB4DF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */ = {isa = PBXBuildFile; fileRef = D995F0D995F0D995F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB5340DB5340DB5340000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */ = {isa = PBXBuildFile; fileRef = D9A0D0D9A0D0D9A0D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB5B50DB5B50DB5B50000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */ = {isa = PBXBuildFile; fileRef = D9AC30D9AC30D9AC30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB6100DB6100DB6100000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */ = {isa = PBXBuildFile; fileRef = D9B6E0D9B6E0D9B6E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB6850DB6850DB6850000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */ = {isa = PBXBuildFile; fileRef = D9C1C0D9C1C0D9C1C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB6FE0DB6FE0DB6FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */ = {isa = PBXBuildFile; fileRef = D9CCA0D9CCA0D9CCA0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB77A0DB77A0DB77A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */ = {isa = PBXBuildFile; fileRef = D9D780D9D780D9D780000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB7F60DB7F60DB7F60000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */ = {isa = PBXBuildFile; fileRef = D9E260D9E260D9E260000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB8720DB8720DB8720000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */ = {isa = PBXBuildFile; fileRef = D9ED40D9ED40D9ED40000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB8EE0DB8EE0DB8EE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */ = {isa = PBXBuildFile; fileRef = D9F820D9F820D9F820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */; settings = { COMPILER_FLAGS = ""; }; };
+DB98B0DB98B0DB98B0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */ = {isa = PBXBuildFile; fileRef = DA0300DA0300DA0300000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */; settings = { COMPILER_FLAGS = ""; }; };
+DBA0C0DBA0C0DBA0C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */ = {isa = PBXBuildFile; fileRef = DA0E70DA0E70DA0E70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */; settings = { COMPILER_FLAGS = ""; }; };
+DBA8D0DBA8D0DBA8D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */ = {isa = PBXBuildFile; fileRef = DA19A0DA19A0DA19A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */; settings = { COMPILER_FLAGS = ""; }; };
+DBB400DBB400DBB400000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+DC52C0DC52C0DC52C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/test_physfs.c */ = {isa = PBXBuildFile; fileRef = DC4FE0DC4FE0DC4FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/test_physfs.c */; settings = { COMPILER_FLAGS = ""; }; };
+DC5EC0DC5EC0DC5EC0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+DCF800DCF800DCF800000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/wxtest_physfs.cpp */ = {isa = PBXBuildFile; fileRef = DCF670DCF670DCF670000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/wxtest_physfs.cpp */; settings = { COMPILER_FLAGS = "-D__WXMAC__"; }; };
+DD0340DD0340DD0340000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              D56B20D56B20D56B20000000 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              D2E950D2E950D2E950000000 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              D565A0D565A0D565A0000000 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              D57930D57930D57930000000 /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              D57A10D57A10D57A10000000 /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              DDA380DDA380DDA380000000 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = D529F0D529F0D529F0000000 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DBC910DBC910DBC910000000;
+                     remoteInfo = "physfs-static";
+              };
+              DDAAC0DDAAC0DDAAC0000000 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = D529F0D529F0D529F0000000 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DA3E70DA3E70DA3E70000000;
+                     remoteInfo = physfs;
+              };
+              DDB200DDB200DDB200000000 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = D529F0D529F0D529F0000000 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DC7350DC7350DC7350000000;
+                     remoteInfo = test_physfs;
+              };
+              DDB970DDB970DDB970000000 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = D529F0D529F0D529F0000000 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DD1A20DD1A20DD1A20000000;
+                     remoteInfo = wxtest_physfs;
+              };
+              DDC120DDC120DDC120000000 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = D529F0D529F0D529F0000000 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = D73570D73570D73570000000;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text"; name = "CMakeLists.txt"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt"; sourceTree = "<absolute>"; };
+D8F310D8F310D8F310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "physfs.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c"; sourceTree = "<absolute>"; };
+D8FDF0D8FDF0D8FDF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "physfs_byteorder.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c"; sourceTree = "<absolute>"; };
+D908C0D908C0D908C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "physfs_unicode.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c"; sourceTree = "<absolute>"; };
+D913A0D913A0D913A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "os2.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c"; sourceTree = "<absolute>"; };
+D91E80D91E80D91E80000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "pocketpc.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c"; sourceTree = "<absolute>"; };
+D92940D92940D92940000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "posix.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c"; sourceTree = "<absolute>"; };
+D93440D93440D93440000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "unix.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c"; sourceTree = "<absolute>"; };
+D93F00D93F00D93F00000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "macosx.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c"; sourceTree = "<absolute>"; };
+D949E0D949E0D949E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "windows.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c"; sourceTree = "<absolute>"; };
+D954F0D954F0D954F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "dir.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c"; sourceTree = "<absolute>"; };
+D95FF0D95FF0D95FF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "grp.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c"; sourceTree = "<absolute>"; };
+D96AB0D96AB0D96AB0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "hog.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c"; sourceTree = "<absolute>"; };
+D97590D97590D97590000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "lzma.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c"; sourceTree = "<absolute>"; };
+D98050D98050D98050000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "mvl.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c"; sourceTree = "<absolute>"; };
+D98B30D98B30D98B30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "qpak.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c"; sourceTree = "<absolute>"; };
+D995F0D995F0D995F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "wad.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c"; sourceTree = "<absolute>"; };
+D9A0D0D9A0D0D9A0D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "zip.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c"; sourceTree = "<absolute>"; };
+D9AC30D9AC30D9AC30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zCrc.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c"; sourceTree = "<absolute>"; };
+D9B6E0D9B6E0D9B6E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zBuffer.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c"; sourceTree = "<absolute>"; };
+D9C1C0D9C1C0D9C1C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zDecode.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c"; sourceTree = "<absolute>"; };
+D9CCA0D9CCA0D9CCA0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zExtract.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c"; sourceTree = "<absolute>"; };
+D9D780D9D780D9D780000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zHeader.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c"; sourceTree = "<absolute>"; };
+D9E260D9E260D9E260000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zIn.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c"; sourceTree = "<absolute>"; };
+D9ED40D9ED40D9ED40000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zItem.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c"; sourceTree = "<absolute>"; };
+D9F820D9F820D9F820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "7zMethodID.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c"; sourceTree = "<absolute>"; };
+DA0300DA0300DA0300000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "BranchX86.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c"; sourceTree = "<absolute>"; };
+DA0E70DA0E70DA0E70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "BranchX86_2.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c"; sourceTree = "<absolute>"; };
+DA19A0DA19A0DA19A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "LzmaDecode.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c"; sourceTree = "<absolute>"; };
+DACD10DACD10DACD10000000 /* physfs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libphysfs.dylib"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+DC4890DC4890DC4890000000 /* physfs-static */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libphysfs.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+DC4FE0DC4FE0DC4FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/test_physfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "test_physfs.c"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/test_physfs.c"; sourceTree = "<absolute>"; };
+DCEF20DCEF20DCEF20000000 /* test_physfs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_physfs; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+DCF670DCF670DCF670000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/wxtest_physfs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "wxtest_physfs.cpp"; path = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/wxtest_physfs.cpp"; sourceTree = "<absolute>"; };
+DD9D60DD9D60DD9D60000000 /* wxtest_physfs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = wxtest_physfs; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              D57E00D57E00D57E00000000  = {
+                     isa = PBXGroup;
+                     children = (
+                            D54DD0D54DD0D54DD0000000 /* Sources */,
+                            D551A0D551A0D551A0000000 /* Resources */,
+                            D55570D55570D55570000000 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              D54DD0D54DD0D54DD0000000 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D557E0D557E0D557E0000000 /* ALL_BUILD */,
+                            D53760D53760D53760000000 /* dist */,
+                            D54290D54290D54290000000 /* physfs */,
+                            D4FEA0D4FEA0D4FEA0000000 /* physfs-static */,
+                            D51690D51690D51690000000 /* test_physfs */,
+                            D51F20D51F20D51F20000000 /* wxtest_physfs */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              D551A0D551A0D551A0000000 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              D557E0D557E0D557E0000000 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D53310D53310D53310000000 /* CMake Rules */,
+                            D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              D53310D53310D53310000000 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              D53760D53760D53760000000 /* dist */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D53D80D53D80D53D80000000 /* CMake Rules */,
+                            D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */,
+                     );
+                     name = dist;
+                     sourceTree = "<group>";
+              };
+              D53D80D53D80D53D80000000 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              D54290D54290D54290000000 /* physfs */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D54670D54670D54670000000 /* Source Files */,
+                            D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */,
+                     );
+                     name = physfs;
+                     sourceTree = "<group>";
+              };
+              D54670D54670D54670000000 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D8F310D8F310D8F310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */,
+                            D8FDF0D8FDF0D8FDF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */,
+                            D908C0D908C0D908C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */,
+                            D913A0D913A0D913A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */,
+                            D91E80D91E80D91E80000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */,
+                            D92940D92940D92940000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */,
+                            D93440D93440D93440000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */,
+                            D93F00D93F00D93F00000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */,
+                            D949E0D949E0D949E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */,
+                            D954F0D954F0D954F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */,
+                            D95FF0D95FF0D95FF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */,
+                            D96AB0D96AB0D96AB0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */,
+                            D97590D97590D97590000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */,
+                            D98050D98050D98050000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */,
+                            D98B30D98B30D98B30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */,
+                            D995F0D995F0D995F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */,
+                            D9A0D0D9A0D0D9A0D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */,
+                            D9AC30D9AC30D9AC30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */,
+                            D9B6E0D9B6E0D9B6E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */,
+                            D9C1C0D9C1C0D9C1C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */,
+                            D9CCA0D9CCA0D9CCA0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */,
+                            D9D780D9D780D9D780000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */,
+                            D9E260D9E260D9E260000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */,
+                            D9ED40D9ED40D9ED40000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */,
+                            D9F820D9F820D9F820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */,
+                            DA0300DA0300DA0300000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */,
+                            DA0E70DA0E70DA0E70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */,
+                            DA19A0DA19A0DA19A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              D4FEA0D4FEA0D4FEA0000000 /* physfs-static */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D50280D50280D50280000000 /* Source Files */,
+                            D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */,
+                     );
+                     name = "physfs-static";
+                     sourceTree = "<group>";
+              };
+              D50280D50280D50280000000 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D8F310D8F310D8F310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */,
+                            D8FDF0D8FDF0D8FDF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */,
+                            D908C0D908C0D908C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */,
+                            D913A0D913A0D913A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */,
+                            D91E80D91E80D91E80000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */,
+                            D92940D92940D92940000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */,
+                            D93440D93440D93440000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */,
+                            D93F00D93F00D93F00000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */,
+                            D949E0D949E0D949E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */,
+                            D954F0D954F0D954F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */,
+                            D95FF0D95FF0D95FF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */,
+                            D96AB0D96AB0D96AB0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */,
+                            D97590D97590D97590000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */,
+                            D98050D98050D98050000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */,
+                            D98B30D98B30D98B30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */,
+                            D995F0D995F0D995F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */,
+                            D9A0D0D9A0D0D9A0D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */,
+                            D9AC30D9AC30D9AC30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */,
+                            D9B6E0D9B6E0D9B6E0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */,
+                            D9C1C0D9C1C0D9C1C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */,
+                            D9CCA0D9CCA0D9CCA0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */,
+                            D9D780D9D780D9D780000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */,
+                            D9E260D9E260D9E260000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */,
+                            D9ED40D9ED40D9ED40000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */,
+                            D9F820D9F820D9F820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */,
+                            DA0300DA0300DA0300000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */,
+                            DA0E70DA0E70DA0E70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */,
+                            DA19A0DA19A0DA19A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              D51690D51690D51690000000 /* test_physfs */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D51960D51960D51960000000 /* Source Files */,
+                            D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */,
+                     );
+                     name = test_physfs;
+                     sourceTree = "<group>";
+              };
+              D51960D51960D51960000000 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DC4FE0DC4FE0DC4FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/test_physfs.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              D51F20D51F20D51F20000000 /* wxtest_physfs */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D522E0D522E0D522E0000000 /* Source Files */,
+                            D7E650D7E650D7E650000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeLists.txt */,
+                     );
+                     name = wxtest_physfs;
+                     sourceTree = "<group>";
+              };
+              D522E0D522E0D522E0000000 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DCF670DCF670DCF670000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/wxtest_physfs.cpp */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              D55570D55570D55570000000 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DACD10DACD10DACD10000000 /* physfs */,
+                            DC4890DC4890DC4890000000 /* physfs-static */,
+                            DCEF20DCEF20DCEF20000000 /* test_physfs */,
+                            DD9D60DD9D60DD9D60000000 /* wxtest_physfs */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              DA3E70DA3E70DA3E70000000 /* libphysfs.dylib */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = DA4320DA4320DA4320000000 /* Build configuration list for PBXNativeTarget "physfs" */;
+                     buildPhases = (
+                            DA3130DA3130DA3130000000 /* CMake ReRun */,
+                            DA2BF0DA2BF0DA2BF0000000 /* Sources */,
+                            DA36C0DA36C0DA36C0000000 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     buildSettings = {
+                            DYLIB_COMPATIBILITY_VERSION = "1.0.0";
+                            DYLIB_CURRENT_VERSION = "2.0.0";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".dylib";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'physfs_EXPORTS' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            LIBRARY_STYLE = DYNAMIC;
+                            OTHER_CFLAGS = "-fPIC   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -dynamiclib -headerpad_max_install_names";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                     );
+                     name = "libphysfs.dylib";
+                     productName = "libphysfs.dylib";
+                     productReference = DACD10DACD10DACD10000000 /* physfs */;
+                     productType = "com.apple.product-type.library.dynamic";
+              };
+              DBC910DBC910DBC910000000 /* libphysfs.a */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = DBCDC0DBCDC0DBCDC0000000 /* Build configuration list for PBXNativeTarget "physfs-static" */;
+                     buildPhases = (
+                            DBBBA0DBBBA0DBBBA0000000 /* CMake ReRun */,
+                            DBB700DBB700DBB700000000 /* Sources */,
+                            DBC160DBC160DBC160000000 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                     );
+                     name = "libphysfs.a";
+                     productName = "libphysfs.a";
+                     productReference = DC4890DC4890DC4890000000 /* physfs-static */;
+                     productType = "com.apple.product-type.library.static";
+              };
+              DC7350DC7350DC7350000000 /* test_physfs */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = DC7800DC7800DC7800000000 /* Build configuration list for PBXNativeTarget "test_physfs" */;
+                     buildPhases = (
+                            DC65E0DC65E0DC65E0000000 /* CMake ReRun */,
+                            DC61E0DC61E0DC61E0000000 /* Sources */,
+                            DC6BA0DC6BA0DC6BA0000000 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = test_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                            DDAF40DDAF40DDAF40000000 /* PBXTargetDependency */,
+                     );
+                     name = test_physfs;
+                     productName = test_physfs;
+                     productReference = DCEF20DCEF20DCEF20000000 /* test_physfs */;
+                     productType = "com.apple.product-type.tool";
+              };
+              DD1A20DD1A20DD1A20000000 /* wxtest_physfs */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = DD1ED0DD1ED0DD1ED0000000 /* Build configuration list for PBXNativeTarget "wxtest_physfs" */;
+                     buildPhases = (
+                            DD0CB0DD0CB0DD0CB0000000 /* CMake ReRun */,
+                            DD0880DD0880DD0880000000 /* Sources */,
+                            DD1270DD1270DD1270000000 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_CPLUSPLUSFLAGS = " -D__WXMAC__   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = wxtest_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     dependencies = (
+                            DDAF40DDAF40DDAF40000000 /* PBXTargetDependency */,
+                     );
+                     name = wxtest_physfs;
+                     productName = wxtest_physfs;
+                     productReference = DD9D60DD9D60DD9D60000000 /* wxtest_physfs */;
+                     productType = "com.apple.product-type.tool";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              D529F0D529F0D529F0000000 /* Project object */ = {
+                     isa = PBXProject;
+                     buildConfigurationList = D76C90D76C90D76C90000000 /* Build configuration list for PBXProject  "PhysicsFS" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            D2E950D2E950D2E950000000 /* Debug */,
+                            D565A0D565A0D565A0000000 /* Release */,
+                            D57930D57930D57930000000 /* MinSizeRel */,
+                            D57A10D57A10D57A10000000 /* RelWithDebInfo */,
+                     );
+                     hasScannedForEncodings = 0;
+                     mainGroup = D57E00D57E00D57E00000000;
+                     projectRoot = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                     targets = (
+                            D73570D73570D73570000000 /* ALL_BUILD */,
+                            D7F800D7F800D7F800000000 /* dist */,
+                            D87AF0D87AF0D87AF0000000 /* install */,
+                            DA3E70DA3E70DA3E70000000 /* libphysfs.dylib */,
+                            DBC910DBC910DBC910000000 /* libphysfs.a */,
+                            DC7350DC7350DC7350000000 /* test_physfs */,
+                            DD1A20DD1A20DD1A20000000 /* wxtest_physfs */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              D78220D78220D78220000000 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+              };
+              D73740D73740D73740000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              D74050D74050D74050000000 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+              };
+              D7E9F0D7E9F0D7E9F0000000 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+              };
+              D7F9E0D7F9E0D7F9E0000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              D7FFE0D7FFE0D7FFE0000000 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/dist_cmakeRulesBuildPhase.make$CONFIGURATION all";
+              };
+              D86FF0D86FF0D86FF0000000 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+              };
+              D87C90D87C90D87C90000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              D88280D88280D88280000000 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+              };
+              DA3130DA3130DA3130000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              DA36C0DA36C0DA36C0000000 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/physfs_postBuildPhase.make$CONFIGURATION all";
+              };
+              DBBBA0DBBBA0DBBBA0000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              DBC160DBC160DBC160000000 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/physfs-static_postBuildPhase.make$CONFIGURATION all";
+              };
+              DC65E0DC65E0DC65E0000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              DC6BA0DC6BA0DC6BA0000000 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/test_physfs_postBuildPhase.make$CONFIGURATION all";
+              };
+              DD0CB0DD0CB0DD0CB0000000 /* CMake ReRun */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake ReRun";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/ReRunCMake.make";
+              };
+              DD1270DD1270DD1270000000 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS -f /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/CMakeScripts/wxtest_physfs_postBuildPhase.make$CONFIGURATION all";
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              DA2BF0DA2BF0DA2BF0000000 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            D8F690D8F690D8F690000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */,
+                            D90160D90160D90160000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */,
+                            D910C0D910C0D910C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */,
+                            D91720D91720D91720000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */,
+                            D92660D92660D92660000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */,
+                            D92D10D92D10D92D10000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */,
+                            D93C20D93C20D93C20000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */,
+                            D942B0D942B0D942B0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */,
+                            D94D90D94D90D94D90000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */,
+                            D958C0D958C0D958C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */,
+                            D967D0D967D0D967D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */,
+                            D96E60D96E60D96E60000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */,
+                            D97D70D97D70D97D70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */,
+                            D98400D98400D98400000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */,
+                            D99310D99310D99310000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */,
+                            D999A0D999A0D999A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */,
+                            D9A900D9A900D9A900000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */,
+                            D9AFC0D9AFC0D9AFC0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */,
+                            D9B8B0D9B8B0D9B8B0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */,
+                            D9C390D9C390D9C390000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */,
+                            D9CE70D9CE70D9CE70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */,
+                            D9D950D9D950D9D950000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */,
+                            D9E430D9E430D9E430000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */,
+                            D9EF10D9EF10D9EF10000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */,
+                            D9F9F0D9F9F0D9F9F0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */,
+                            DA0460DA0460DA0460000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */,
+                            DA0FE0DA0FE0DA0FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */,
+                            DA1B10DA1B10DA1B10000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+              DBB700DBB700DBB700000000 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            DAD5A0DAD5A0DAD5A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs.c */,
+                            DADB70DADB70DADB70000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_byteorder.c */,
+                            DAE820DAE820DAE820000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/physfs_unicode.c */,
+                            DAED30DAED30DAED30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/os2.c */,
+                            DAF2C0DAF2C0DAF2C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/pocketpc.c */,
+                            DAFFD0DAFFD0DAFFD0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/posix.c */,
+                            DB07A0DB07A0DB07A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/unix.c */,
+                            DB0A90DB0A90DB0A90000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/macosx.c */,
+                            DB11C0DB11C0DB11C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/platform/windows.c */,
+                            DB1F30DB1F30DB1F30000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/dir.c */,
+                            DB2700DB2700DB2700000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/grp.c */,
+                            DB2ED0DB2ED0DB2ED0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/hog.c */,
+                            DB3680DB3680DB3680000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/lzma.c */,
+                            DB3E50DB3E50DB3E50000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/mvl.c */,
+                            DB4620DB4620DB4620000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/qpak.c */,
+                            DB4DF0DB4DF0DB4DF0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/wad.c */,
+                            DB5340DB5340DB5340000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/archivers/zip.c */,
+                            DB5B50DB5B50DB5B50000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/7zCrc.c */,
+                            DB6100DB6100DB6100000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zBuffer.c */,
+                            DB6850DB6850DB6850000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zDecode.c */,
+                            DB6FE0DB6FE0DB6FE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zExtract.c */,
+                            DB77A0DB77A0DB77A0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zHeader.c */,
+                            DB7F60DB7F60DB7F60000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zIn.c */,
+                            DB8720DB8720DB8720000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zItem.c */,
+                            DB8EE0DB8EE0DB8EE0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Archive/7z/7zMethodID.c */,
+                            DB98B0DB98B0DB98B0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86.c */,
+                            DBA0C0DBA0C0DBA0C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Branch/BranchX86_2.c */,
+                            DBA8D0DBA8D0DBA8D0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/lzma/C/Compress/Lzma/LzmaDecode.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+              DC61E0DC61E0DC61E0000000 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            DC52C0DC52C0DC52C0000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/test_physfs.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+              DD0880DD0880DD0880000000 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            DCF800DCF800DCF800000000 /* /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/test/wxtest_physfs.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              DDA830DDA830DDA830000000 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DBC910DBC910DBC910000000 /* libphysfs.a */;
+                     targetProxy = DDA380DDA380DDA380000000 /* PBXContainerItemProxy */;
+              };
+              DDAF40DDAF40DDAF40000000 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DA3E70DA3E70DA3E70000000 /* libphysfs.dylib */;
+                     targetProxy = DDAAC0DDAAC0DDAAC0000000 /* PBXContainerItemProxy */;
+              };
+              DDB700DDB700DDB700000000 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DC7350DC7350DC7350000000 /* test_physfs */;
+                     targetProxy = DDB200DDB200DDB200000000 /* PBXContainerItemProxy */;
+              };
+              DDBE70DDBE70DDBE70000000 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DD1A20DD1A20DD1A20000000 /* wxtest_physfs */;
+                     targetProxy = DDB970DDB970DDB970000000 /* PBXContainerItemProxy */;
+              };
+              DDC810DDC810DDC810000000 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = D73570D73570D73570000000 /* ALL_BUILD */;
+                     targetProxy = DDC120DDC120DDC120000000 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              D76DB0D76DB0D76DB0000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                     };
+                     name = Debug;
+              };
+              D776E0D776E0D776E0000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                     };
+                     name = Release;
+              };
+              D77920D77920D77920000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                     };
+                     name = MinSizeRel;
+              };
+              D77AA0D77AA0D77AA0000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                     };
+                     name = RelWithDebInfo;
+              };
+              D783F0D783F0D783F0000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              D790C0D790C0D790C0000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              D7A410D7A410D7A410000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              D7B760D7B760D7B760000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+              D80D70D80D70D80D70000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              D81A40D81A40D81A40000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              D82D90D82D90D82D90000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              D840E0D840E0D840E0000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+              D89080D89080D89080000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              D89D60D89D60D89D60000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              D8B0B0D8B0B0D8B0B0000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              D8C400D8C400D8C400000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+              DA4660DA4660DA4660000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            DYLIB_COMPATIBILITY_VERSION = "1.0.0";
+                            DYLIB_CURRENT_VERSION = "2.0.0";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".dylib";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'physfs_EXPORTS' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug;
+                            LIBRARY_SEARCH_PATHS = "";
+                            LIBRARY_STYLE = DYNAMIC;
+                            OTHER_CFLAGS = "   -fPIC   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -dynamiclib -headerpad_max_install_names -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              DA5410DA5410DA5410000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            DYLIB_COMPATIBILITY_VERSION = "1.0.0";
+                            DYLIB_CURRENT_VERSION = "2.0.0";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".dylib";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'physfs_EXPORTS' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release;
+                            LIBRARY_SEARCH_PATHS = "";
+                            LIBRARY_STYLE = DYNAMIC;
+                            OTHER_CFLAGS = "    -DNDEBUG -fPIC   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -dynamiclib -headerpad_max_install_names -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              DA6EA0DA6EA0DA6EA0000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            DYLIB_COMPATIBILITY_VERSION = "1.0.0";
+                            DYLIB_CURRENT_VERSION = "2.0.0";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".dylib";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'physfs_EXPORTS' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel;
+                            LIBRARY_SEARCH_PATHS = "";
+                            LIBRARY_STYLE = DYNAMIC;
+                            OTHER_CFLAGS = "    -DNDEBUG -fPIC   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -dynamiclib -headerpad_max_install_names -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              DA9890DA9890DA9890000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            DYLIB_COMPATIBILITY_VERSION = "1.0.0";
+                            DYLIB_CURRENT_VERSION = "2.0.0";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".dylib";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'physfs_EXPORTS' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo;
+                            LIBRARY_SEARCH_PATHS = "";
+                            LIBRARY_STYLE = DYNAMIC;
+                            OTHER_CFLAGS = "       -fPIC   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -dynamiclib -headerpad_max_install_names -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+              DBD140DBD140DBD140000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "     -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              DBDDF0DBDDF0DBDDF0000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              DBF5A0DBF5A0DBF5A0000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              DC0DA0DC0DA0DC0DA0000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "         -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+              DC7B40DC7B40DC7B40000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug";
+                            OTHER_CFLAGS = "     -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug/libphysfs.dylib -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = test_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              DC93E0DC93E0DC93E0000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release";
+                            OTHER_CFLAGS = "    -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release/libphysfs.dylib -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = test_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              DC9E70DC9E70DC9E70000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel";
+                            OTHER_CFLAGS = "    -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel/libphysfs.dylib -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = test_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              DCB520DCB520DCB520000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo";
+                            OTHER_CFLAGS = "         -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo/libphysfs.dylib -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = test_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+              DD2250DD2250DD2250000000 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug";
+                            OTHER_CFLAGS = "     -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_CPLUSPLUSFLAGS = " -D__WXMAC__      -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Debug/libphysfs.dylib -framework QuickTime -framework IOKit -framework Carbon -framework Cocoa -framework System -lwx_macud-2.8 -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = wxtest_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Debug;
+              };
+              DD34C0DD34C0DD34C0000000 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release";
+                            OTHER_CFLAGS = "    -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_CPLUSPLUSFLAGS = " -D__WXMAC__     -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/Release/libphysfs.dylib -framework QuickTime -framework IOKit -framework Carbon -framework Cocoa -framework System -lwx_macud-2.8 -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = wxtest_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = Release;
+              };
+              DD4DA0DD4DA0DD4DA0000000 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel";
+                            OTHER_CFLAGS = "    -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_CPLUSPLUSFLAGS = " -D__WXMAC__     -DNDEBUG   -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/MinSizeRel/libphysfs.dylib -framework QuickTime -framework IOKit -framework Carbon -framework Cocoa -framework System -lwx_macud-2.8 -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = wxtest_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = MinSizeRel;
+              };
+              DD65B0DD65B0DD65B0000000 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)\"' 'PHYSFS_HAVE_SYS_UCRED_H=1' '_REENTRANT' '_THREAD_SAFE' 'HAVE_ASSERT_H=1' 'PHYSFS_SUPPORTS_ZIP=1' 'PHYSFS_SUPPORTS_7Z=1' 'PHYSFS_SUPPORTS_GRP=1' 'PHYSFS_SUPPORTS_WAD=1' 'PHYSFS_SUPPORTS_HOG=1' 'PHYSFS_SUPPORTS_MVL=1' 'PHYSFS_SUPPORTS_QPAK=1' '_FILE_OFFSET_BITS=64' '_LARGE_FILES' '__WXDEBUG__' '__WXMAC__'";
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = "/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/. /usr/lib/wx/include/mac-unicode-debug-2.8 /usr/include/wx-2.8 ";
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = " /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo/$(CONFIGURATION) /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo";
+                            OTHER_CFLAGS = "         -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_CPLUSPLUSFLAGS = " -D__WXMAC__          -fno-common -g -pipe -Werror -fsigned-char -Wall -fvisibility=hidden";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -headerpad_max_install_names /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS/RelWithDebInfo/libphysfs.dylib -framework QuickTime -framework IOKit -framework Carbon -framework Cocoa -framework System -lwx_macud-2.8 -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PREBINDING = NO;
+                            PRODUCT_NAME = wxtest_physfs;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              D76C90D76C90D76C90000000 /* Build configuration list for PBXProject  "PhysicsFS" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D76DB0D76DB0D76DB0000000 /* Debug */,
+                            D776E0D776E0D776E0000000 /* Release */,
+                            D77920D77920D77920000000 /* MinSizeRel */,
+                            D77AA0D77AA0D77AA0000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              D6DA60D6DA60D6DA60000000 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D783F0D783F0D783F0000000 /* Debug */,
+                            D790C0D790C0D790C0000000 /* Release */,
+                            D7A410D7A410D7A410000000 /* MinSizeRel */,
+                            D7B760D7B760D7B760000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              D807F0D807F0D807F0000000 /* Build configuration list for PBXAggregateTarget "dist" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D80D70D80D70D80D70000000 /* Debug */,
+                            D81A40D81A40D81A40000000 /* Release */,
+                            D82D90D82D90D82D90000000 /* MinSizeRel */,
+                            D840E0D840E0D840E0000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              D88D60D88D60D88D60000000 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D89080D89080D89080000000 /* Debug */,
+                            D89D60D89D60D89D60000000 /* Release */,
+                            D8B0B0D8B0B0D8B0B0000000 /* MinSizeRel */,
+                            D8C400D8C400D8C400000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              DA4320DA4320DA4320000000 /* Build configuration list for PBXNativeTarget "physfs" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            DA4660DA4660DA4660000000 /* Debug */,
+                            DA5410DA5410DA5410000000 /* Release */,
+                            DA6EA0DA6EA0DA6EA0000000 /* MinSizeRel */,
+                            DA9890DA9890DA9890000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              DBCDC0DBCDC0DBCDC0000000 /* Build configuration list for PBXNativeTarget "physfs-static" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            DBD140DBD140DBD140000000 /* Debug */,
+                            DBDDF0DBDDF0DBDDF0000000 /* Release */,
+                            DBF5A0DBF5A0DBF5A0000000 /* MinSizeRel */,
+                            DC0DA0DC0DA0DC0DA0000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              DC7800DC7800DC7800000000 /* Build configuration list for PBXNativeTarget "test_physfs" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            DC7B40DC7B40DC7B40000000 /* Debug */,
+                            DC93E0DC93E0DC93E0000000 /* Release */,
+                            DC9E70DC9E70DC9E70000000 /* MinSizeRel */,
+                            DCB520DCB520DCB520000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              DD1ED0DD1ED0DD1ED0000000 /* Build configuration list for PBXNativeTarget "wxtest_physfs" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            DD2250DD2250DD2250000000 /* Debug */,
+                            DD34C0DD34C0DD34C0000000 /* Release */,
+                            DD4DA0DD4DA0DD4DA0000000 /* MinSizeRel */,
+                            DD65B0DD65B0DD65B0000000 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = D529F0D529F0D529F0000000 /* Project object */;
+}

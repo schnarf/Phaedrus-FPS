@@ -1,0 +1,1 @@
+/usr/bin/gcc   -Wl,-search_paths_first -headerpad_max_install_names -fPIC CMakeFiles/test_physfs.dir/test/test_physfs.o  -o test_physfs  -L/Users/aaron/Documents/Code/GameEngine/lib/PhysicsFS libphysfs.2.0.0.dylib -framework Carbon -framework IOKit -lz -framework Carbon -framework IOKit 
