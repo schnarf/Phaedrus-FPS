@@ -5,7 +5,8 @@
 
 namespace Render { class Render; }
 namespace boost { class thread; }
-namespace World { class WorldUpdater; }
+namespace World { class World; class WorldUpdater; }
+namespace VM { class VM; }
 
 namespace System {
 
@@ -14,9 +15,11 @@ namespace System {
 	class Kernel {
 		friend class Task;
 	public:
-		//! Public accessor function
-		static Kernel* Get();
-		
+		//! Constructor, initializes the kernel if necessary
+		Kernel();
+		//! Destructor, deinitializes the kernel
+		~Kernel();
+	
 		//! Starts the kernel
 		void Start();
 		//! Stops the kernel
@@ -28,12 +31,9 @@ namespace System {
 		inline System::Input* GetTaskInput() const { return m_pInput.get(); }
 		inline World::WorldUpdater* GetTaskWorldUpdater() const { return m_pWorldUpdater.get(); }
 		
+		World::World* GetWorld() const;
+		
 	private:
-		//! Constructor, initializes the kernel if necessary
-		Kernel();
-		//! Destructor, deinitializes the kernel
-		~Kernel();
-	
 		//! Adds a task to the kernel, called by the task's constructor
 		void addTask( Task* pTask );
 		
@@ -42,9 +42,7 @@ namespace System {
 		
 		//! Is our kernel running
 		bool m_bIsRunning;
-	
-		//! The kernel singleton
-		static Kernel* m_pKernel;
+		
 		//! The kernel's tasks
 		vector<Task*> m_pTasks;
 		
@@ -54,9 +52,17 @@ namespace System {
 		//! Our rendering task
 		auto_ptr<Render::Render> m_pRender;
 		
-		// ! Our world updater task
+		//! Our world updater task
 		auto_ptr<World::WorldUpdater> m_pWorldUpdater;
+		
+		//! Our world
+		auto_ptr<World::World> m_pWorld;
+		
+		//! Our VM
+		auto_ptr<VM::VM> m_pVM;
 	};
+	
+	inline World::World* System::Kernel::GetWorld() const { return m_pWorld.get(); }
 
 };
 

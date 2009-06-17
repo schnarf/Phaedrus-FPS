@@ -4,7 +4,11 @@
 #include "common.h"
 #include <SDL.h>
 
+namespace Render { class Render; }
+
 namespace System {
+
+	class Input;
 
 	class Window {
 	public:
@@ -15,7 +19,7 @@ namespace System {
 		};
 		
 		//! Instantiate the window
-		Window( string strTitle, uint uWidth, uint uHeight, uint eFlags );
+		Window( string strTitle, uint uWidth, uint uHeight, uint eFlags, Render::Render* pRender );
 		//! De-initialize the window
 		~Window();
 		
@@ -32,8 +36,14 @@ namespace System {
 		string m_strTitle;
 		uint m_eFlags;
 		
-		// SDL surface
+		//! SDL surface
 		SDL_Surface* m_pSDLSurface;
+		
+		//! Rendering task
+		Render::Render* m_pRender;
+		
+		//! The input task all windows report to
+		static Input* m_pInput;
 	}; // end class Window
 
 }; // end namespace System

@@ -2,13 +2,14 @@
 #include "System/Task.h"
 #include "System/Kernel.h"
 
-System::Task::Task( string strName, bool bOwnThread ) :
+System::Task::Task( string strName, Kernel* pKernel, bool bOwnThread ) :
 	m_bOwnThread( bOwnThread ),
 	m_strName( strName ),
 	m_pThread( NULL ),
+	m_pKernel( pKernel ),
 	m_bRunning( false ) {
 	// Register our task
-	System::Kernel::Get()->addTask( this );
+	GetKernel()->addTask( this );
 }
 
 

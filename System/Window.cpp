@@ -1,18 +1,23 @@
 #include "System/Window.h"
 #include "System/Kernel.h"
 #include "System/Input.h"
+#include "Render/Render.h"
 #include <SDL.h>
 #include <iostream>
+
+System::Input* System::Window::m_pInput= NULL;
+
 //==================================================
 //! Instantiate the window
 //==================================================
-System::Window::Window( string strTitle, uint uWidth, uint uHeight, uint eFlags ) :
+System::Window::Window( string strTitle, uint uWidth, uint uHeight, uint eFlags, Render::Render* pRender ) :
 	m_uWidth(uWidth),
 	m_uHeight(uHeight),
-	m_eFlags(eFlags) {
+	m_eFlags(eFlags),
+	m_pRender( pRender ) {
 	
 	// We need to be in the rendering thread
-	assert( reinterpret_cast<System::Task*>(System::Kernel::Get()->GetTaskRender())->GetThreadID() == boost::this_thread::get_id() );
+	assert( m_pRender->GetThreadID() == boost::this_thread::get_id() );
 	
 	m_eFlags= WINDOW_OPENGL;
 	
@@ -42,6 +47,8 @@ System::Window::Window( string strTitle, uint uWidth, uint uHeight, uint eFlags 
 		// Set the title
 		SetTitle( strTitle );
 	}
+	
+	m_pInput= pRender->GetKernel()->GetTaskInput();
 }
 
 
@@ -66,7 +73,8 @@ void System::Window::SetTitle( const string& strTitle ) {
 //==================================================
 void System::Window::SwapBuffers() const {
 	// We need to be in the rendering thread
-	assert( reinterpret_cast<System::Task*>(System::Kernel::Get()->GetTaskRender())->GetThreadID() == boost::this_thread::get_id() );
+	//assert( reinterpret_cast<System::Task*>(System::Kernel::Get()->GetTaskRender())->GetThreadID() == boost::this_thread::get_id() );
+	assert( m_pRender->GetThreadID() == boost::this_thread::get_id() );
 	
 	SDL_GL_SwapBuffers();
 	SDL_Flip( m_pSDLSurface );
@@ -80,10 +88,10 @@ void System::Window::PollEvents() {
 	SDL_Event event;
 	
 	// We need to be in the rendering thread
-	assert( reinterpret_cast<System::Task*>(System::Kernel::Get()->GetTaskRender())->GetThreadID() == boost::this_thread::get_id() );
+	//assert( m_pRender->GetThreadID() == boost::this_thread::get_id() );
 
 	while( SDL_PollEvent(&event) ) {
-		System::Kernel::Get()->GetTaskInput()->postEvent( &event );
+		m_pInput->postEvent( &event );
 	}
 }
 

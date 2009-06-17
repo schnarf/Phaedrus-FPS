@@ -7,7 +7,7 @@
 //==================================================
 //! Initialize the task
 //==================================================
-System::Input::Input() : System::Task("Input") {
+System::Input::Input( Kernel* pKernel ) : System::Task("Input", pKernel) {
 }
 
 
@@ -57,7 +57,7 @@ void System::Input::process() {
 		
 		case SDL_QUIT:
 			// Tell the kernel to quit
-			Kernel::Get()->Stop();
+			GetKernel()->Stop();
 		break;
 		
 		default:

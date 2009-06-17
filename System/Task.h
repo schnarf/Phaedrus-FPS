@@ -11,7 +11,7 @@ namespace System {
 	class Task {
 		friend class Kernel;
 	public:
-		Task( string strName, bool bOwnThread= true );
+		Task( string strName, Kernel* pKernel, bool bOwnThread= true );
 		~Task();
 		
 		//! Start the task (init)
@@ -28,6 +28,9 @@ namespace System {
 		inline ThreadID GetThreadID() const { return m_idThread; }
 		//! Get whether this runs in its own thread
 		inline bool IsOwnThread() const { return m_bOwnThread; }
+		
+		//! Get a reference to the kernel
+		Kernel* GetKernel() const;
 		
 	protected:
 		//! Called whenever the thread is started
@@ -57,7 +60,11 @@ namespace System {
 		void mainLoop();
 		//! Whether we're running
 		bool m_bRunning;
+		//! The kernel
+		Kernel* m_pKernel;
 	};
+	
+	inline Kernel* Task::GetKernel() const { return m_pKernel; }
 
 };
 

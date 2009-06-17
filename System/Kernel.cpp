@@ -5,9 +5,9 @@
 #include "Render/Render.h"
 #include "World/WorldUpdater.h"
 #include "World/World.h"
-
-// The kernel singleton
-System::Kernel* System::Kernel::m_pKernel= NULL;
+#include "VM/VM.h"
+#include "System/VFS.h"
+#include <iostream>
 
 //==================================================
 //! Constructor, initializes the kernel if necessary
@@ -27,15 +27,21 @@ System::Kernel::~Kernel() {
 //! Starts the kernel
 //==================================================
 void System::Kernel::Start() {
+
+	// Load the VFS
+	System::VFS::Get();
+	
+	// Start the VM
+	m_pVM.reset( new VM::VM );
 	
 	// Create the rendering task
-	m_pRender.reset( new Render::Render() );
+	m_pRender.reset( new Render::Render(this) );
 	
 	// Create the input task
-	m_pInput.reset( new System::Input() );
+	m_pInput.reset( new System::Input(this) );
 	
 	// Create the world update task
-	m_pWorldUpdater.reset( new World::WorldUpdater() );
+	m_pWorldUpdater.reset( new World::WorldUpdater(this) );
 	
 	
 	
@@ -53,7 +59,7 @@ void System::Kernel::Stop() {
 	m_bIsRunning= false;
 	
 	// Unload the world
-	World::World::Get()->Unload();
+	m_pWorld->Unload();
 }
 
 //==================================================
@@ -66,8 +72,13 @@ void System::Kernel::run() {
 	}
 	
 	// Load the world
-	World::World::Get()->Load();
-
+	m_pWorld.reset( new World::World(m_pVM.get()) );
+	m_pWorld->Load();
+	
+	// A test
+	//VM::VM::Get()->Execute( "PrintUint(GetEntity(GetLocalPlayerID()):GetID())" );
+	//VM::VM::Get()->Execute( "vec = Vector(2.0, 3.0, 4.0);\n PrintFloat(vec:Length());\n PrintVector(vec:Normalize());\n" );
+	
 	while( m_bIsRunning ) {
 		// Run all tasks
 		// TODO: Run separate threads first so we don't wait?
@@ -90,15 +101,3 @@ void System::Kernel::addTask( System::Task* pTask ) {
 	m_pTasks.push_back( pTask );
 }
 
-
-//==================================================
-//! Public accessor function
-//==================================================
-System::Kernel* System::Kernel::Get() {
-	// If we have no instance, create one
-	if( m_pKernel == NULL ) {
-		m_pKernel= new Kernel();
-	}
-	
-	return m_pKernel;
-}

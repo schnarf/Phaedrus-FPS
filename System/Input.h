@@ -8,6 +8,8 @@
 
 namespace System {
 
+	class Kernel;
+
 	enum InputKeys {
 		INPUT_LEFT,
 		INPUT_RIGHT,
@@ -24,7 +26,7 @@ namespace System {
 		friend class System::Window;
 	public:
 		//! Initialize the task
-		Input();
+		Input( Kernel* pKernel );
 		//! Deinitialize the task
 		~Input();
 		

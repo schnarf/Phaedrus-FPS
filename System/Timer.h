@@ -4,10 +4,8 @@
 #include "common.h"
 
 namespace System {
-
-	typedef uint Ticks;
 	
-	Ticks GetTickCountMillis();
+	uint64 GetTickCountMillis();
 
 }; // end namespace System
 
