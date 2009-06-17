@@ -32,9 +32,11 @@ namespace Math {
 		Vector& operator-=( const Vector& rhs );
 		
 		//! Dot Product
+		float Dot( const Vector& rhs ) const;
 		float operator*( const Vector& rhs ) const;
 		
 		//! Scalar multiplication
+		Vector& Scale( const float& rhs );
 		const Vector operator*( const float& rhs ) const;
 		Vector& operator*=( const float& rhs );
 		
@@ -46,7 +48,7 @@ namespace Math {
 		float Length() const;
 		
 		//! Normalize the vector
-		void Normalize();
+		Math::Vector& Normalize();
 		
 		//! Public members
 		float x, y, z;

@@ -26,7 +26,7 @@
 //==================================================
 //! Initialize the task
 //==================================================
-Render::Render::Render() : System::Task("Render", false) {
+Render::Render::Render( System::Kernel* pKernel ) : System::Task("Render", pKernel, false) {
 }
 
 
@@ -49,7 +49,7 @@ void Render::Render::init() {
 	uint uHeight= 864;
 
 	// Get our rendering window
-	m_pWindow= new System::Window( "Test", uWidth, uHeight, System::Window::WINDOW_OPENGL );
+	m_pWindow= new System::Window( "Test", uWidth, uHeight, System::Window::WINDOW_OPENGL, this );
 	
 	// Set up OpenGL
 	glEnable( GL_TEXTURE_2D );
@@ -90,7 +90,7 @@ void Render::Render::deinit() {
 //! Our main loop
 //==================================================
 void Render::Render::process() {
-	if( !System::Kernel::Get()->IsRunning() ) return;
+	if( !GetKernel()->IsRunning() ) return;
 	
 	// Begin our timeslice
 	uint uStartTicks= System::GetTickCountMillis();
@@ -105,12 +105,12 @@ void Render::Render::process() {
 	glLoadIdentity();
 	gluPerspective( 60.0, 1.3333333333f, 1.0f, 1024.0f );
 	Math::Vector eyepos, lookvec;
-	eyepos= World::World::Get()->GetLocalPlayer()->GetEyePosition();
-	lookvec= World::World::Get()->GetLocalPlayer()->GetLookVector() + eyepos;
+	eyepos= GetKernel()->GetWorld()->GetLocalPlayerEntity()->GetEyePosition();
+	lookvec= GetKernel()->GetWorld()->GetLocalPlayerEntity()->GetLookVector() + eyepos;
 	gluLookAt( eyepos.X(), eyepos.Y(), eyepos.Z(), lookvec.X(), lookvec.Y(), lookvec.Z(), 0.0, 1.0, 0.0 );
 	
 	// Draw the level
-	World::World::Get()->GetLevel()->Render();
+	GetKernel()->GetWorld()->GetLevel()->Render();
 	
 	// Draw entities
 	

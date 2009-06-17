@@ -61,6 +61,9 @@ Math::Vector& Math::Vector::operator-=( const Math::Vector& rhs ) {
 float Math::Vector::operator*( const Math::Vector& rhs ) const {
 	return x*rhs.X() + y*rhs.Y() + z*rhs.Z();
 }
+float Math::Vector::Dot( const Math::Vector& rhs ) const {
+	return *this * rhs;
+}
 
 
 //==================================================
@@ -77,6 +80,9 @@ Math::Vector& Math::Vector::operator*=( const float& rhs ) {
 	z*= rhs;
 	
 	return *this;
+}
+Math::Vector& Math::Vector::Scale( const float& rhs ) {
+	return *this*= rhs;
 }
 
 
@@ -106,6 +112,8 @@ float Math::Vector::Length() const {
 //==================================================
 //! Normalize the vector
 //==================================================
-void Math::Vector::Normalize() {
+Math::Vector& Math::Vector::Normalize() {
 	*this/= Length();
+	
+	return *this;
 }

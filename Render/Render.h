@@ -4,7 +4,7 @@
 #include "common.h"
 #include "System/Task.h"
 
-namespace System { class Window; }
+namespace System { class Window; class Kernel; }
 
 namespace Render {
 
@@ -12,7 +12,7 @@ namespace Render {
 		friend class System::Kernel;
 	public:
 		//! Initialize the task
-		Render();
+		Render( System::Kernel* pKernel );
 		//! Deinitialize the task
 		~Render();
 		
