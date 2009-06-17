@@ -51,40 +51,15 @@ World::MeshRef World::ResourceManager::GetMesh( const string& strFilename ) {
 
 
 //==================================================
-//! Load a file from the VFS into memory
-//==================================================
-Error World::ResourceManager::LoadRaw( const string& strFilename, vector<byte>& data ) {
-	// Check to see if it exists
-	if( !PHYSFS_exists(strFilename.c_str()) ) {
-		return ERROR_FILE_DOES_NOT_EXIST;
-	}
-	
-	// Open the file, allocate, and read
-	PHYSFS_file* file= PHYSFS_openRead( strFilename.c_str() );
-	data.resize( PHYSFS_fileLength(file) );
-	PHYSFS_read( file, &data[0], sizeof(byte), data.size() );
-	PHYSFS_close( file );
-	
-	return ERROR_OK;
-}
-
-
-//==================================================
 //! Constructor
 //==================================================
 World::ResourceManager::ResourceManager() {
-	// Initialize PhysicsFS
-	PHYSFS_init( NULL );
 	
-	// Hardcoded paths for now
-	PHYSFS_addToSearchPath( "/Users/aaron/Desktop/", 1 );
-	PHYSFS_addToSearchPath( "/Users/aaron/Documents/ioquake3/baseq3/pak0/", 1 );
 }
 
 //==================================================
 //! Non-inline destructor
 //==================================================
 World::ResourceManager::~ResourceManager() {
-	// Deinitialize PhysicsFS
-	PHYSFS_deinit();
+	
 }

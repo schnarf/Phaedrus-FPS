@@ -8,13 +8,14 @@
 #define _WORLD_WORLDUPDATER_H_
 
 #include "System/Task.h"
+namespace System { class Kernel; }
 
 namespace World {
 
 	class WorldUpdater : public System::Task {
 	public:
 		//! Initialize the task
-		WorldUpdater();
+		WorldUpdater( System::Kernel* pKernel );
 		
 	protected:
 		//! Called whenever the thread is started

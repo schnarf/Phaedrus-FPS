@@ -9,7 +9,7 @@ namespace World {
 	class PlayerEntity : public Entity {
 	public:
 		//! Constructor
-		PlayerEntity();
+		PlayerEntity( EntityID id );
 		
 		//! Look vector accessor
 		inline Math::Vector GetLookVector() const { return m_lookVec; }

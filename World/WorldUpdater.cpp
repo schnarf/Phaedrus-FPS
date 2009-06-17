@@ -11,7 +11,7 @@ using Math::Vector;
 //==================================================
 //! Initialize the task
 //==================================================
-World::WorldUpdater::WorldUpdater() : System::Task( "World Updater", false ) {
+World::WorldUpdater::WorldUpdater( System::Kernel* pKernel ) : System::Task( "World Updater", pKernel, false ) {
 }
 
 
@@ -34,13 +34,13 @@ void World::WorldUpdater::deinit() {
 //! Our main loop
 //==================================================
 void World::WorldUpdater::process() {
-	World::World* pWorld= World::World::Get();
+	World::World* pWorld= GetKernel()->GetWorld();
 
 	// If the world is not loaded, do nothing
 	if( !pWorld->IsLoaded() ) return;
 	
 	// Calculate timestep
-	uint uDt= System::Kernel::Get()->GetTaskRender()->GetLastTimeslice();
+	uint uDt= GetKernel()->GetTaskRender()->GetLastTimeslice();
 	// If our timestep is zero, we do nothing for now
 	if( uDt == 0 ) return;
 	

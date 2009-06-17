@@ -11,12 +11,15 @@ namespace {
 //==================================================
 //! Entity constructor
 //==================================================
-World::Entity::Entity( World::EntityType type ) :
+World::Entity::Entity( World::EntityType type, EntityID id ) :
 	m_type(type),
+	m_id(id),
 	m_flags(DEFAULT_FLAGS) {
 }
 
+//==================================================
 //! Inherited class cast to player
+//==================================================
 World::PlayerEntity* World::Entity::ToPlayer() {
 	assert( m_type == ENTITY_PLAYER );
 	if( m_type != ENTITY_PLAYER ) return NULL;

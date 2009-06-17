@@ -1,6 +1,7 @@
 #include "common.h"
 #include "World/Level.h"
 #include "World/ResourceManager.h"
+#include "System/VFS.h"
 #include <OpenGL/gl.h>
 #include <boost/tokenizer.hpp>
 #include <cstdio>
@@ -12,7 +13,7 @@ World::Level::Level( const string& strFilename ) {
 	
 	// Load the file from the VFS
 	vector<byte> raw;
-	Error err= World::ResourceManager::Get()->LoadRaw( strFilename, raw );
+	Error err= System::VFS::Get()->LoadRaw( strFilename, raw );
 	assert( err == ERROR_OK );
 	
 	// From the bytes, turn it into an array of lines

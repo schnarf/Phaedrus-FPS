@@ -1,5 +1,6 @@
 #include "common.h"
 #include "World/ResourceManager.h"
+#include "System/VFS.h"
 #include "World/Mesh.h"
 #include "World/Resources.h"
 #include <OpenGL/gl.h>
@@ -234,7 +235,7 @@ void World::Mesh::loadFromMD3( const string& strFilename ) {
 
 	// Load the file from the VFS
 	vector<byte> raw;
-	Error err= World::ResourceManager::Get()->LoadRaw( strFilename, raw );
+	Error err= System::VFS::Get()->LoadRaw( strFilename, raw );
 	assert( err == ERROR_OK );
 	
 	bing:

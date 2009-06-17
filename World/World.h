@@ -6,11 +6,15 @@
 #ifndef _WORLD_WORLD_H_
 #define _WORLD_WORLD_H_
 
+#define VM_META_STAGE 0
+
 #include "common.h"
 #include "World/Entity.h"
 #include "Math/Vector.h"
 #include "World/WorldUpdater.h"
 //#include "System/Timer.h"
+
+namespace VM { class VM; }
 
 namespace World {
 	
@@ -19,17 +23,19 @@ namespace World {
 	class World {
 		friend class WorldUpdater;
 	public:
+		//! Constructor
+		World( VM::VM* pVM );
+		//! Non-inline destructor
+		~World();
+	
 		//! Load the world
 		void Load();
 		
 		//! Deallocate
 		void Unload();
 		
-		//! Singleton accessor
-		static World* Get();
-		
 		//! Accessor for the local player
-		inline PlayerEntity* GetLocalPlayer() const { return m_pLocalPlayer; }
+		inline PlayerEntity* GetLocalPlayerEntity() const { return m_pLocalPlayer; }
 		
 		//! Is the world loaded?
 		inline bool IsLoaded() const { return m_bIsLoaded; }
@@ -42,14 +48,11 @@ namespace World {
 		
 		//! Update positions, do physics, etc
 		void Tick( uint tickCount );
-	private:
-		//! Constructor
-		World();
-		//! Non-inline destructor
-		~World();
-		//! Singleton
-		static World* m_pWorld;
 		
+		//! Get an entity POINTER by ID (not reference)
+		Entity* GetEntity( EntityID id ) const;
+
+	private:
 		//! Whether the world is loaded
 		bool m_bIsLoaded;
 		
@@ -63,8 +66,12 @@ namespace World {
 		
 		uint m_oldTickCount;
 		
+		//! Our virtual machine
+		VM::VM* m_pVM;
+		
 	}; // end class World
 	
 }; // end namespace World
+
 
 #endif

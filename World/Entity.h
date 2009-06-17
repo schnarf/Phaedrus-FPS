@@ -9,8 +9,10 @@
 #include "common.h"
 #include "Math/Vector.h"
 #include "World/Mesh.h"
-
+#include <iostream>
 namespace World {
+
+	typedef unsigned int EntityID;
 
 	enum EntityType {
 		ENTITY_STATIC,
@@ -24,13 +26,18 @@ namespace World {
 		ENTITY_FLAG_PHYSICS= 1<<2			// Do we calculate physics for this entity
 	}; // end enum EntityFlags
 	
+	enum EntityMessage {
+		ENTITY_MSG_SPAWN,
+		NUM_ENTITY_MESSAGES
+	}; // end enum EntityMessage
+	
 	class PlayerEntity;
 
 	class Entity {
 
 	public:
 		//! Entity constructor
-		Entity( EntityType type );
+		Entity( EntityType type, EntityID id );
 	
 		//! Position accessor
 		Math::Vector GetPosition() const;
@@ -65,9 +72,13 @@ namespace World {
 		
 		//! Check if a flag is set
 		bool IsFlag( EntityFlag flag ) const;
+		//! Set a flag
+		void SetFlag( EntityFlag flag );
 		
 		//! Inherited class cast to player
 		PlayerEntity* ToPlayer();
+		
+		EntityID GetID() const { return m_id; }
 	protected:
 		//! Position, velocity, acceleration
 		Math::Vector m_pos, m_vel, m_acc;
@@ -77,6 +88,9 @@ namespace World {
 		
 		//! The type of entity
 		EntityType m_type;
+		
+		//! The id assigned by World
+		EntityID m_id;
 		
 		//! Our flags
 		uint m_flags;
@@ -123,5 +137,6 @@ inline World::EntityType World::Entity::GetType() const { return m_type; }
 
 //! Check if a flag is set
 inline bool World::Entity::IsFlag( EntityFlag flag ) const { return m_flags & flag; }
-
+//! Set a flag
+inline void World::Entity::SetFlag( EntityFlag flag ) { m_flags|= flag; }
 #endif
