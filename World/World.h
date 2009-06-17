@@ -47,7 +47,7 @@ namespace World {
 		EntityRef SpawnEntity( EntityType type, const Math::Vector& pos );
 		
 		//! Update positions, do physics, etc
-		void Tick( uint tickCount );
+		void Tick( uint64 tickCount );
 		
 		//! Get an entity POINTER by ID (not reference)
 		Entity* GetEntity( EntityID id ) const;

@@ -1,6 +1,8 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
 
+#define __DEBUG_BUILD__ 1
+
 #include <string>
 using std::string;
 
@@ -29,6 +31,7 @@ typedef boost::thread::id ThreadID;
 
 typedef unsigned int uint;
 typedef unsigned int uint32;
+typedef unsigned long long int uint64;
 typedef unsigned char byte;
 
 enum Error {
@@ -38,5 +41,14 @@ enum Error {
 };
 
 #include "common_checked_type.h"
+
+#if __DEBUG_BUILD__
+	#include <iostream>
+	
+	#define DebugPrint( strError ) \
+		std::cerr << __FILE__ << ", Line " << __LINE__ << ": " << strError << std::endl;
+#else
+	#define DebugPrint( strError )
+#endif
 
 #endif
