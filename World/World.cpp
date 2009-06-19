@@ -2,8 +2,10 @@
 #include "World/Entity.h"
 #include "World/PlayerEntity.h"
 #include "World/Level.h"
+#include "World/ResourceManager.h"
 #include "Math/Vector.h"
 #include "System/Timer.h"
+#include "System/VFS.h"
 #include "VM/VM.h"
 #include <iostream>
 
@@ -19,11 +21,9 @@ World::World::World( VM::VM* pVM ) :
 	
 	// Register with VM
 	m_pVM->SetWorld( this );
-	/*pVM->Register( "GetLocalPlayerEntity", GetLocalPlayerEntity_VM );
-	pVM->Register( "GetLocalPlayerID", GetLocalPlayerID );
-	pVM->Register( "GetEntity", GetEntity );
-	pVM->Register( "SpawnEntity", SpawnEntity_VM );*/
 	
+	// Create the resource manager
+	m_pResourceManager.reset( new ResourceManager );
 }
 
 

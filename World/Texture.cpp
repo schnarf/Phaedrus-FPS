@@ -1,7 +1,6 @@
 #include "common.h"
 #include "World/Texture.h"
 #include "World/Resources.h"
-#include "World/ResourceManager.h"
 #include "System/VFS.h"
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>

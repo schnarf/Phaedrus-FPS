@@ -10,7 +10,6 @@
 #include "System/Timer.h"
 #include "Render/Render.h"
 
-#include "World/ResourceManager.h"
 #include "World/Texture.h"
 
 #include "World/ParticleSystem.h"

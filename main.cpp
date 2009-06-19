@@ -6,7 +6,8 @@ using namespace std;
 
 int main (int argc, char * argv[]) {
     // Start the kernel
-	System::Kernel::Get()->Start();
+	System::Kernel* pKernel= new System::Kernel();
+	pKernel->Start();
 	
     return 0;
 }

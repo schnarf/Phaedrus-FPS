@@ -14,9 +14,7 @@
 		932BCDE40FCF3AB50073DF91 /* Kernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 932BCDE30FCF3AB50073DF91 /* Kernel.cpp */; };
 		9332B3EE0FDCAF6D00091DD8 /* Script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9332B3ED0FDCAF6D00091DD8 /* Script.cpp */; };
 		9332B3F10FDCAFE500091DD8 /* VM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9332B3F00FDCAFE500091DD8 /* VM.cpp */; };
-		9332B4520FDCB76800091DD8 /* VMType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9332B4510FDCB76800091DD8 /* VMType.cpp */; };
 		934A793D0FD1F58400E8982E /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 934A793C0FD1F58400E8982E /* Texture.cpp */; };
-		934A79400FD1F64400E8982E /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 934A793F0FD1F64400E8982E /* ResourceManager.cpp */; };
 		93654E780FE0B98900DB68A8 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 93654E580FE0B98900DB68A8 /* print.c */; };
 		93654E790FE0B98900DB68A8 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 93654E590FE0B98900DB68A8 /* lzio.c */; };
 		93654E7A0FE0B98900DB68A8 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 93654E5A0FE0B98900DB68A8 /* lvm.c */; };
@@ -54,6 +52,7 @@
 		938B06980FD09B4F007C5F3D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938B06970FD09B4F007C5F3D /* OpenGL.framework */; };
 		938B07460FD0A971007C5F3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938B07450FD0A971007C5F3D /* Cocoa.framework */; };
 		938B074D0FD0A983007C5F3D /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B074B0FD0A983007C5F3D /* SDLMain.m */; };
+		938F9F040FEB26EE000E4F91 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 938F9F030FEB26EE000E4F91 /* ResourceManager.cpp */; };
 		9393759E0FD6008A007C8E60 /* WorldUpdater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9393759D0FD6008A007C8E60 /* WorldUpdater.cpp */; };
 		93A1F0780FD2DB6100F7F1CC /* libphysfs.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A1F0770FD2DB6100F7F1CC /* libphysfs.2.0.0.dylib */; };
 		93A1F0990FD2DCE600F7F1CC /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A1F0980FD2DCE600F7F1CC /* SDL.framework */; };
@@ -132,15 +131,10 @@
 		9332B3ED0FDCAF6D00091DD8 /* Script.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Script.cpp; path = VM/Script.cpp; sourceTree = "<group>"; };
 		9332B3EF0FDCAFE500091DD8 /* VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VM.h; path = VM/VM.h; sourceTree = "<group>"; };
 		9332B3F00FDCAFE500091DD8 /* VM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VM.cpp; path = VM/VM.cpp; sourceTree = "<group>"; };
-		9332B4500FDCB76800091DD8 /* VMType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMType.h; path = VM/VMType.h; sourceTree = "<group>"; };
-		9332B4510FDCB76800091DD8 /* VMType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VMType.cpp; path = VM/VMType.cpp; sourceTree = "<group>"; };
 		934A793B0FD1F58400E8982E /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = World/Texture.h; sourceTree = "<group>"; };
 		934A793C0FD1F58400E8982E /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = World/Texture.cpp; sourceTree = "<group>"; };
-		934A793E0FD1F64400E8982E /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceManager.h; path = World/ResourceManager.h; sourceTree = "<group>"; };
-		934A793F0FD1F64400E8982E /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResourceManager.cpp; path = World/ResourceManager.cpp; sourceTree = "<group>"; };
 		934A79430FD1F6ED00E8982E /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = World/Resources.h; sourceTree = "<group>"; };
 		93641A220FE3701B00D851E2 /* VMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMCall.h; path = VM/VMCall.h; sourceTree = "<group>"; };
-		93641B200FE3923B00D851E2 /* Meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Meta.h; path = VM/Meta.h; sourceTree = "<group>"; };
 		93654E580FE0B98900DB68A8 /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = print.c; path = lib/lua/src/print.c; sourceTree = "<group>"; };
 		93654E590FE0B98900DB68A8 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzio.c; path = lib/lua/src/lzio.c; sourceTree = "<group>"; };
 		93654E5A0FE0B98900DB68A8 /* lvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lvm.c; path = lib/lua/src/lvm.c; sourceTree = "<group>"; };
@@ -182,6 +176,8 @@
 		938B07450FD0A971007C5F3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		938B074B0FD0A983007C5F3D /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
 		938B074C0FD0A983007C5F3D /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		938F9F020FEB26EE000E4F91 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceManager.h; path = World/ResourceManager.h; sourceTree = "<group>"; };
+		938F9F030FEB26EE000E4F91 /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResourceManager.cpp; path = World/ResourceManager.cpp; sourceTree = "<group>"; };
 		9393759C0FD6008A007C8E60 /* WorldUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldUpdater.h; path = World/WorldUpdater.h; sourceTree = "<group>"; };
 		9393759D0FD6008A007C8E60 /* WorldUpdater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WorldUpdater.cpp; path = World/WorldUpdater.cpp; sourceTree = "<group>"; };
 		93A1F0770FD2DB6100F7F1CC /* libphysfs.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libphysfs.2.0.0.dylib; path = lib/PhysicsFS/libphysfs.2.0.0.dylib; sourceTree = "<group>"; };
@@ -399,7 +395,7 @@
 				93A1F1460FD2ECBE00F7F1CC /* Mesh.h */,
 				93A1F1300FD2EADC00F7F1CC /* World.h */,
 				934A79430FD1F6ED00E8982E /* Resources.h */,
-				934A793E0FD1F64400E8982E /* ResourceManager.h */,
+				938F9F020FEB26EE000E4F91 /* ResourceManager.h */,
 				93D642550FD59BF700F09BE3 /* PlayerEntity.h */,
 				934A793B0FD1F58400E8982E /* Texture.h */,
 				9393759C0FD6008A007C8E60 /* WorldUpdater.h */,
@@ -438,10 +434,7 @@
 				9332B3ED0FDCAF6D00091DD8 /* Script.cpp */,
 				9332B3EF0FDCAFE500091DD8 /* VM.h */,
 				9332B3F00FDCAFE500091DD8 /* VM.cpp */,
-				9332B4500FDCB76800091DD8 /* VMType.h */,
-				9332B4510FDCB76800091DD8 /* VMType.cpp */,
 				93641A220FE3701B00D851E2 /* VMCall.h */,
-				93641B200FE3923B00D851E2 /* Meta.h */,
 			);
 			name = VM;
 			sourceTree = "<group>";
@@ -451,13 +444,13 @@
 			children = (
 				9320CEF00FD5C2D200BE893A /* World Headers */,
 				934A793C0FD1F58400E8982E /* Texture.cpp */,
-				934A793F0FD1F64400E8982E /* ResourceManager.cpp */,
 				93A1F1310FD2EADC00F7F1CC /* World.cpp */,
 				93A1F1470FD2ECBE00F7F1CC /* Mesh.cpp */,
 				93765C2B0FD49FD100CE09B0 /* ParticleSystem.cpp */,
 				93D642730FD5A2EC00F09BE3 /* Level.cpp */,
 				93D642510FD5962400F09BE3 /* Entity.cpp */,
 				93D6426B0FD59EFD00F09BE3 /* PlayerEntity.cpp */,
+				938F9F030FEB26EE000E4F91 /* ResourceManager.cpp */,
 				9393759D0FD6008A007C8E60 /* WorldUpdater.cpp */,
 			);
 			name = World;
@@ -810,7 +803,6 @@
 				93CBEE820FD15D14006FC272 /* Input.cpp in Sources */,
 				93CBEF130FD183A9006FC272 /* LockFreeFIFO.cpp in Sources */,
 				934A793D0FD1F58400E8982E /* Texture.cpp in Sources */,
-				934A79400FD1F64400E8982E /* ResourceManager.cpp in Sources */,
 				93A1F0D20FD2DCF600F7F1CC /* IMG_lbm.c in Sources */,
 				93A1F0D30FD2DCF600F7F1CC /* IMG_xv.c in Sources */,
 				93A1F0D40FD2DCF600F7F1CC /* IMG_bmp.c in Sources */,
@@ -838,7 +830,6 @@
 				93BD08440FDB60B900F46A41 /* Client.cpp in Sources */,
 				9332B3EE0FDCAF6D00091DD8 /* Script.cpp in Sources */,
 				9332B3F10FDCAFE500091DD8 /* VM.cpp in Sources */,
-				9332B4520FDCB76800091DD8 /* VMType.cpp in Sources */,
 				93B1128E0FDE08DB0074580B /* find_best_match.cpp in Sources */,
 				93B1128F0FDE08DB0074580B /* error.cpp in Sources */,
 				93B112900FDE08DB0074580B /* create_class.cpp in Sources */,
@@ -891,6 +882,7 @@
 				93654E950FE0B98900DB68A8 /* lauxlib.c in Sources */,
 				93654E960FE0B98900DB68A8 /* ldblib.c in Sources */,
 				93654E970FE0B98900DB68A8 /* lcode.c in Sources */,
+				938F9F040FEB26EE000E4F91 /* ResourceManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

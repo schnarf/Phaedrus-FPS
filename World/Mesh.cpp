@@ -1,5 +1,4 @@
 #include "common.h"
-#include "World/ResourceManager.h"
 #include "System/VFS.h"
 #include "World/Mesh.h"
 #include "World/Resources.h"

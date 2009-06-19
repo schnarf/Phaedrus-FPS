@@ -15,10 +15,11 @@
 //#include "System/Timer.h"
 
 namespace VM { class VM; }
+namespace System { class VFS; }
 
 namespace World {
 	
-	class Texture; class PlayerEntity; class Level;
+	class Texture; class PlayerEntity; class Level; class ResourceManager;
 	
 	class World {
 		friend class WorldUpdater;
@@ -66,8 +67,11 @@ namespace World {
 		
 		uint m_oldTickCount;
 		
-		//! Our virtual machine
+		//! The virtual machine we use
 		VM::VM* m_pVM;
+		
+		//! Our resource manager
+		auto_ptr<ResourceManager> m_pResourceManager;
 		
 	}; // end class World
 	
