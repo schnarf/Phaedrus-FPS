@@ -309,6 +309,7 @@
 		93B98DE20FDE24FC00DE735F /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = System/Console.cpp; sourceTree = "<group>"; };
 		93BD08420FDB60B900F46A41 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = System/Client.h; sourceTree = "<group>"; };
 		93BD08430FDB60B900F46A41 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = System/Client.cpp; sourceTree = "<group>"; };
+		93BDC2530FFAEC7B00E29B7E /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 		93C6F2D60FD491E200957990 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = Math/Vector.h; sourceTree = "<group>"; };
 		93C6F2D70FD491E200957990 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = Math/Vector.cpp; sourceTree = "<group>"; };
 		93CBEE800FD15D14006FC272 /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Input.h; path = System/Input.h; sourceTree = "<group>"; };
@@ -423,6 +424,7 @@
 			children = (
 				93D642700FD5A1D600F09BE3 /* common_checked_type.h */,
 				932BCDD10FCF38FB0073DF91 /* common.h */,
+				93BDC2530FFAEC7B00E29B7E /* globals.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";

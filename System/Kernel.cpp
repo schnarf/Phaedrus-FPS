@@ -27,12 +27,6 @@ System::Kernel::~Kernel() {
 //! Starts the kernel
 //==================================================
 void System::Kernel::Start() {
-
-	// Load the VFS
-	System::VFS::Get();
-	
-	// Start the VM
-	m_pVM.reset( new VM::VM );
 	
 	// Create the rendering task
 	m_pRender.reset( new Render::Render(this) );
@@ -42,7 +36,6 @@ void System::Kernel::Start() {
 	
 	// Create the world update task
 	m_pWorldUpdater.reset( new World::WorldUpdater(this) );
-	
 	
 	
 	// Start our main loop
@@ -72,7 +65,7 @@ void System::Kernel::run() {
 	}
 	
 	// Load the world
-	m_pWorld.reset( new World::World(m_pVM.get()) );
+	m_pWorld.reset( new World::World() );
 	m_pWorld->Load();
 	
 	// A test

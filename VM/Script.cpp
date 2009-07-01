@@ -10,7 +10,7 @@ VM::Script::Script( string strFilename, VM::VM* pVM ) :
 	m_pVM(pVM) {
 	// Load the script
 	vector<byte> script;
-	Error err= System::VFS::Get()->LoadRaw( strFilename, script );
+	Error err= g_VFS.LoadRaw( strFilename, script );
 	assert( err == ERROR_OK );
 	
 	// Just reinterpret the string of bytes as chars

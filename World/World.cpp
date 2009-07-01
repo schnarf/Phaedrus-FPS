@@ -15,15 +15,11 @@ using Math::Vector;
 //==================================================
 //! Constructor
 //==================================================
-World::World::World( VM::VM* pVM ) :
-	m_pVM( pVM ) {
+World::World::World() {
 	m_bIsLoaded= false;
 	
 	// Register with VM
-	m_pVM->SetWorld( this );
-	
-	// Create the resource manager
-	m_pResourceManager.reset( new ResourceManager );
+	g_VM.SetWorld( this );
 }
 
 
@@ -84,14 +80,14 @@ void World::World::Load() {
 	// Call the startup script;
 	//m_pVM->LoadScript( "WorldStartup.lua" );
 	
-	m_pVM->Execute( "function WorldStartup()\n"
+	g_VM.Execute( "function WorldStartup()\n"
 	"Print( \"World started up!\" );\n"
 	"localplayer= World:GetLocalPlayerEntity();\n"
 	"localplayer.LookVector= Vector(0.0, 0.0, -1.0);\n"
 	"localplayer.Velocity= Vector(0.0, 0.0, -0.001);\n"
 	"return 1;\n"
 	"end\n" );
-	m_pVM->Call<void>("WorldStartup");
+	g_VM.Call<void>("WorldStartup");
 }
 		
 		

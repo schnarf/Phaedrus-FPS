@@ -15,7 +15,7 @@ World::Texture::Texture( const string& strFilename ) :
 	
 	// Load the file from the VFS
 	vector<byte> raw;
-	Error err= System::VFS::Get()->LoadRaw( strFilename, raw );
+	Error err= g_VFS.LoadRaw( strFilename, raw );
 	assert( err == ERROR_OK );
 	
 	// Load the image

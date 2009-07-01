@@ -1,5 +1,6 @@
 #include "common.h"
 #include "World/Level.h"
+#include "World/ResourceManager.h"
 #include "System/VFS.h"
 #include <OpenGL/gl.h>
 #include <boost/tokenizer.hpp>
@@ -12,7 +13,7 @@ World::Level::Level( const string& strFilename ) {
 	
 	// Load the file from the VFS
 	vector<byte> raw;
-	Error err= System::VFS::Get()->LoadRaw( strFilename, raw );
+	Error err= g_VFS.LoadRaw( strFilename, raw );
 	assert( err == ERROR_OK );
 	
 	// From the bytes, turn it into an array of lines
@@ -66,7 +67,7 @@ World::Level::Level( const string& strFilename ) {
 		assert( i == j );
 		
 		m_surfaces[i].uNumVertices= uNumSurfVtx;
-		m_surfaces[i].pTexture= ResourceManager::Get()->GetTexture( textures[uTexture] );
+		m_surfaces[i].pTexture= g_ResourceManager.GetTexture( textures[uTexture] );
 		m_surfaces[i].pVertices.clear();
 		m_surfaces[i].textureCoords.clear();
 		

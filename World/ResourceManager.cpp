@@ -1,12 +1,14 @@
 #include "World/Resources.h"
 #include "World/ResourceManager.h"
-#include "System/VFS.h"
+
+// Global resource manager
+World::ResourceManager g_ResourceManager;
 
 //==================================================
 //! Constructor
 //==================================================
 World::ResourceManager::ResourceManager() {
-	
+
 }
 
 

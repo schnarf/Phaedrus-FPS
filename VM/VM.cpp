@@ -12,6 +12,9 @@
 
 using namespace luabind;
 
+// Global VM
+VM::VM g_VM;
+
 namespace {
 
 	int add_file_and_line( lua_State* L ) {

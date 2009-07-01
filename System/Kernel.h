@@ -57,9 +57,6 @@ namespace System {
 		
 		//! Our world
 		auto_ptr<World::World> m_pWorld;
-		
-		//! Our VM
-		auto_ptr<VM::VM> m_pVM;
 	};
 	
 	inline World::World* System::Kernel::GetWorld() const { return m_pWorld.get(); }

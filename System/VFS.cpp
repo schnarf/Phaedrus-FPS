@@ -2,19 +2,8 @@
 #include "System/VFS.h"
 #include "PhysicsFS/physfs.h"
 
-System::VFS* System::VFS::m_pVFS= NULL;
-
-//==================================================
-//! Public accessor
-//==================================================
-System::VFS* System::VFS::Get() {
-	if( m_pVFS == NULL ) {
-		m_pVFS= new VFS();
-	}
-	
-	return m_pVFS;
-}
-
+// Global VFS
+System::VFS g_VFS;
 		
 //==================================================
 //! Load a file from the VFS into memory

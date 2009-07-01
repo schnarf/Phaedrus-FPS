@@ -10,14 +10,12 @@
 #include "common.h"
 #include "World/Resources.h"
 
-namespace System { class VFS; }
-
 namespace World {
 
 	class ResourceManager {
 	public:
 		//! Constructor
-		ResourceManager( System::VFS* pVFS );
+		ResourceManager();
 		
 		//! Non-inline destructor
 		~ResourceManager();
@@ -31,9 +29,6 @@ namespace World {
 		//! Resources
 		vector<TextureRef> m_pTextures;
 		vector<MeshRef> m_pMeshes;
-		
-		//! The VFS we use
-		System::VFS* pVFS;
 	}; // end class ResourceManager
 
 }; // end namespace World

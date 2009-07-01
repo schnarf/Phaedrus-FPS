@@ -51,4 +51,7 @@ enum Error {
 	#define DebugPrint( strError )
 #endif
 
+// Include the engine globals
+#include "globals.h"
+
 #endif
