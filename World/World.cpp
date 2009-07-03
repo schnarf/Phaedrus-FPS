@@ -78,15 +78,7 @@ void World::World::Load() {
 	m_oldTickCount= System::GetTickCountMillis();
 	
 	// Call the startup script;
-	//m_pVM->LoadScript( "WorldStartup.lua" );
-	
-	g_VM.Execute( "function WorldStartup()\n"
-	"Print( \"World started up!\" );\n"
-	"localplayer= World:GetLocalPlayerEntity();\n"
-	"localplayer.LookVector= Vector(0.0, 0.0, -1.0);\n"
-	"localplayer.Velocity= Vector(0.0, 0.0, -0.001);\n"
-	"return 1;\n"
-	"end\n" );
+	g_VM.LoadScript( "WorldStartup.lua" );
 	g_VM.Call<void>("WorldStartup");
 }
 		

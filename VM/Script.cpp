@@ -7,7 +7,8 @@
 //! Initialize from a script file
 //==================================================
 VM::Script::Script( string strFilename, VM::VM* pVM ) :
-	m_pVM(pVM) {
+	m_pVM(pVM),
+	m_strFilename(strFilename) {
 	// Load the script
 	vector<byte> script;
 	Error err= g_VFS.LoadRaw( strFilename, script );
@@ -15,8 +16,6 @@ VM::Script::Script( string strFilename, VM::VM* pVM ) :
 	
 	// Just reinterpret the string of bytes as chars
 	m_code= reinterpret_cast<char*>(&script[0]);
-	// We seem to need a trailing newline...
-	m_code+= "\n";
 	
 	// Now register with the VM
 	m_pVM->registerScript( this );

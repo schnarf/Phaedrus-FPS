@@ -33,7 +33,7 @@ System::VFS::VFS() {
 	
 	// Hardcoded paths for now
 	PHYSFS_addToSearchPath( "/Users/aaron/Desktop/", 1 );
-	PHYSFS_addToSearchPath( "/Users/aaron/Documents/Code/GameEngine/Resources/", 1 );
+	PHYSFS_addToSearchPath( "/Users/aaron/Documents/Code/PhaedrusFPS/Resources/", 1 );
 }
 
 

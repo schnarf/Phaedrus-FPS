@@ -73,6 +73,7 @@
 		93A1F1480FD2ECBE00F7F1CC /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F1470FD2ECBE00F7F1CC /* Mesh.cpp */; };
 		93A1F1530FD2ED8500F7F1CC /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F1520FD2ED8500F7F1CC /* Vertex.cpp */; };
 		93AAE2690FCD941C00EA409C /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93AAE2680FCD941C00EA409C /* Task.cpp */; };
+		93B074B90FFC1E300036767B /* Resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93B074B80FFC1E300036767B /* Resource.cpp */; };
 		93B1128E0FDE08DB0074580B /* find_best_match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93B1127A0FDE08DB0074580B /* find_best_match.cpp */; };
 		93B1128F0FDE08DB0074580B /* error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93B1127B0FDE08DB0074580B /* error.cpp */; };
 		93B112900FDE08DB0074580B /* create_class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93B1127C0FDE08DB0074580B /* create_class.cpp */; };
@@ -204,6 +205,8 @@
 		93A1F1540FD2EDBF00F7F1CC /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = Math/Vertex.h; sourceTree = "<group>"; };
 		93AAE2670FCD941C00EA409C /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = System/Task.h; sourceTree = "<group>"; };
 		93AAE2680FCD941C00EA409C /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Task.cpp; path = System/Task.cpp; sourceTree = "<group>"; };
+		93B074B70FFC1E300036767B /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resource.h; path = World/Resource.h; sourceTree = "<group>"; };
+		93B074B80FFC1E300036767B /* Resource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Resource.cpp; path = World/Resource.cpp; sourceTree = "<group>"; };
 		93B1127A0FDE08DB0074580B /* find_best_match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = find_best_match.cpp; path = lib/luabind/src/find_best_match.cpp; sourceTree = "<group>"; };
 		93B1127B0FDE08DB0074580B /* error.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = error.cpp; path = lib/luabind/src/error.cpp; sourceTree = "<group>"; };
 		93B1127C0FDE08DB0074580B /* create_class.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = create_class.cpp; path = lib/luabind/src/create_class.cpp; sourceTree = "<group>"; };
@@ -395,6 +398,7 @@
 				93765C2A0FD49FD100CE09B0 /* ParticleSystem.h */,
 				93A1F1460FD2ECBE00F7F1CC /* Mesh.h */,
 				93A1F1300FD2EADC00F7F1CC /* World.h */,
+				93B074B70FFC1E300036767B /* Resource.h */,
 				934A79430FD1F6ED00E8982E /* Resources.h */,
 				938F9F020FEB26EE000E4F91 /* ResourceManager.h */,
 				93D642550FD59BF700F09BE3 /* PlayerEntity.h */,
@@ -452,6 +456,7 @@
 				93D642730FD5A2EC00F09BE3 /* Level.cpp */,
 				93D642510FD5962400F09BE3 /* Entity.cpp */,
 				93D6426B0FD59EFD00F09BE3 /* PlayerEntity.cpp */,
+				93B074B80FFC1E300036767B /* Resource.cpp */,
 				938F9F030FEB26EE000E4F91 /* ResourceManager.cpp */,
 				9393759D0FD6008A007C8E60 /* WorldUpdater.cpp */,
 			);
@@ -885,6 +890,7 @@
 				93654E960FE0B98900DB68A8 /* ldblib.c in Sources */,
 				93654E970FE0B98900DB68A8 /* lcode.c in Sources */,
 				938F9F040FEB26EE000E4F91 /* ResourceManager.cpp in Sources */,
+				93B074B90FFC1E300036767B /* Resource.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

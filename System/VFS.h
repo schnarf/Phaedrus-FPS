@@ -19,6 +19,9 @@ namespace System {
 		//! Load a file from the VFS into memory
 		Error LoadRaw( const string& strFilename, vector<byte>& data );
 		
+		//! Load a text file from the VFS into memory
+		Error LoadText( const string& strFilename, string& data );
+		
 	private:
 	}; // end class VFS
 	

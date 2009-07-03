@@ -17,9 +17,13 @@ namespace VM {
 		
 		//! Get the script's code
 		const string& GetCode() const;
+		
+		//! Get the script's name
+		const string& GetName() const { return m_strFilename; }
 	private:
 		string m_code;
 		VM* m_pVM;
+		string m_strFilename;
 	}; // end class Script
 
 }; // end namespace VM
