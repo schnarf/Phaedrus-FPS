@@ -2,7 +2,7 @@
 #include "System/VFS.h"
 #include "World/Mesh.h"
 #include "World/Resources.h"
-#include <OpenGL/gl.h>
+#include "Render/GL.h"
 
 using Math::Vertex; using Math::VertexRef;
 

@@ -1,9 +1,8 @@
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-
-#include <SDL.h>
 
 #include "common.h"
+
+#include "Render/GL.h"
+#include <SDL.h>
 
 #include "System/Kernel.h"
 #include "System/Window.h"

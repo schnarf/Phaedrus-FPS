@@ -2,7 +2,7 @@
 #define _WORLD_TEXTURE_H_
 
 #include "common.h"
-#include <OpenGL/gl.h>
+#include "Render/GL.h"
 
 namespace World {
 	

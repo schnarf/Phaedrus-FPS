@@ -1,7 +1,7 @@
 #include "common.h"
 #include "World/ParticleSystem.h"
 #include <cmath>
-#include <OpenGL/gl.h>
+#include "Render/GL.h"
 
 namespace {
 	const float PARTICLE_SIZE= 0.5f;

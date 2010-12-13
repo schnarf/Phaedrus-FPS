@@ -55,12 +55,12 @@ namespace VM {
 	
 	//! Register a function
 	template <class F>
-	inline void VM::VM::Register( const string& name, F f ) {
+	inline void VM::Register( const string& name, F f ) {
 		luabind::module( m_pLuaState ) [
 			luabind::def( name.c_str(), f )
 		];
 	}
 	
-}; // end namespace VM
+} // end namespace VM
 
 #endif

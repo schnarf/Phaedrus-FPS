@@ -2,7 +2,7 @@
 #include "World/Level.h"
 #include "World/ResourceManager.h"
 #include "System/VFS.h"
-#include <OpenGL/gl.h>
+#include "Render/GL.h"
 #include <boost/tokenizer.hpp>
 #include <cstdio>
 

@@ -1,6 +1,6 @@
 #include "common.h"
 #include "System/VFS.h"
-#include "PhysicsFS/physfs.h"
+#include "physfs.h"
 
 // Global VFS
 System::VFS g_VFS;

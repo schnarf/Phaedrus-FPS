@@ -34,7 +34,7 @@ void World::WorldUpdater::deinit() {
 //! Our main loop
 //==================================================
 void World::WorldUpdater::process() {
-	World::World* pWorld= GetKernel()->GetWorld();
+	World* pWorld= GetKernel()->GetWorld();
 
 	// If the world is not loaded, do nothing
 	if( !pWorld->IsLoaded() ) return;

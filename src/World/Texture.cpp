@@ -2,8 +2,7 @@
 #include "World/Texture.h"
 #include "World/Resources.h"
 #include "System/VFS.h"
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
+#include "Render/GL.h"
 #include <SDL.h>
 #include "SDL_image/SDL_image.h"
 
@@ -38,10 +37,10 @@ World::Texture::Texture( const string& strFilename ) :
 	
 	if( bpp == 4 ) {
 		if( bRGB ) fmt= GL_RGBA;
-		else fmt= GL_BGRA;
+		else assert( false );
 	} else if( bpp == 3 ) {
 		if( bRGB ) fmt= GL_RGB;
-		else fmt= GL_BGR;
+		else assert( false );
 	} else {
 		assert( false );
 	}
@@ -55,7 +54,8 @@ World::Texture::Texture( const string& strFilename ) :
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
 	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
 	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
-	glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
+	// GL_GENERATE_MIPMAP doesn't exist on windows. need to use glGenerateMipmap()?
+	//glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
 	
 	if( surface ) SDL_FreeSurface( surface );
 }
