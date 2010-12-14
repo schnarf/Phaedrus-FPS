@@ -1,5 +1,7 @@
-#ifndef _MATH_PLANE_H_
-#define _MATH_PLANE_H_
+/* Math/Plane.h
+ *
+ * A plane in 3d space, defined by a point and normal
+ */
 
 #include "Math/Vector.h"
 
@@ -22,6 +24,4 @@ namespace Math {
 		float distance;		// d
 	}; // end class Plane
 
-}; // end namespace Math
-
-#endif
+} // end namespace Math

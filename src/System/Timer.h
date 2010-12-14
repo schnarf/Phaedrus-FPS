@@ -1,7 +1,7 @@
-#ifndef _SYSTEM_TIMER_H_
-#define _SYSTEM_TIMER_H_
-
-#include "common.h"
+/* System/Timer.h
+ *
+ * Functions related to the time
+ */
 
 namespace System {
 	
@@ -9,6 +9,4 @@ namespace System {
 	
 	uint64 GetTickCountMillis();
 
-}; // end namespace System
-
-#endif
+} // end namespace System

@@ -1,7 +1,10 @@
-#ifndef _RENDER_RENDER_H_
-#define _RENDER_RENDER_H_
+/* Render/Render.h
+ *
+ * The rendering task
+ */
 
-#include "common.h"
+#pragma once
+
 #include "System/Task.h"
 
 namespace System { class Window; class Kernel; }
@@ -36,9 +39,7 @@ namespace Render {
 		uint64 m_uLastTimeslice;
 	}; // end class Render
 
-}; // end namespace Render
+} // end namespace Render
 
 //! Get the last time slice in milliseconds
 inline uint64 Render::Render::GetLastTimeslice() const { return m_uLastTimeslice; }
-
-#endif

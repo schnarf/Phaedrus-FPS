@@ -1,10 +1,12 @@
-#ifndef _SYSTEM_INPUT_H_
-#define _SYSTEM_INPUT_H_
+/* System/Input.h
+ *
+ * Interface between input devices and the engine
+ */
 
-#include "common.h"
+#pragma once
+
 #include "System/Task.h"
 #include "System/Window.h"
-#include <SDL.h>
 
 namespace System {
 
@@ -73,6 +75,4 @@ namespace System {
 		
 	}; // end class Input
 
-}; // end namespace System
-
-#endif
+} // end namespace System

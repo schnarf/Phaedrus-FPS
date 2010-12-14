@@ -4,8 +4,7 @@
  * Responds to input, does physics, etc
  */
 
-#ifndef _WORLD_WORLDUPDATER_H_
-#define _WORLD_WORLDUPDATER_H_
+#pragma once
 
 #include "System/Task.h"
 namespace System { class Kernel; }
@@ -35,6 +34,4 @@ namespace World {
 		void doPhysics();
 	}; // end class WorldUpdater
 
-}; // end namespace World
-
-#endif
+} // end namespace World

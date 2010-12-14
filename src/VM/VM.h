@@ -3,8 +3,7 @@
  * The engine's virtual machine. Has only one instance.
  */
 
-#ifndef _VM_VM_H_
-#define _VM_VM_H_
+#pragma once
 
 #include "luabind/luabind.hpp"
 
@@ -63,4 +62,3 @@ namespace VM {
 	
 } // end namespace VM
 
-#endif

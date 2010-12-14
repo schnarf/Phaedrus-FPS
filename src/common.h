@@ -1,4 +1,11 @@
-#pragma once
+/* common.h
+ *
+ * Our precompiled header, must be included at the top of every
+ * .cpp file, and cannot be included elsewhere
+ */
+
+#ifndef _COMMON_H_INCLUDED_
+#define _COMMON_H_INCLUDED_
 
 #include <string>
 #include <deque>
@@ -24,6 +31,8 @@ typedef unsigned int uint32;
 typedef unsigned long long int uint64;
 typedef unsigned char byte;
 
+#include <SDL.h>
+
 enum Error {
 	ERROR_OK,
 	ERROR_FILE_DOES_NOT_EXIST,
@@ -43,3 +52,10 @@ enum Error {
 
 // Include the engine globals
 #include "globals.h"
+
+#else
+
+// Prevent other inclusions
+#error "common.h cannot be included from anywhere but the top of a .cpp file."
+
+#endif

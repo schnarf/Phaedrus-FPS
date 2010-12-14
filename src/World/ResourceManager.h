@@ -3,11 +3,8 @@
  * Responsible for loading anything that comes from the VFS
  * Also tracks references, so each asset only needs to be loaded once
  */
+#pragma once
 
-#ifndef _WORLD_RESOURCEMANAGER_H_
-#define _WORLD_RESOURCEMANAGER_H_
-
-#include "common.h"
 #include "World/Resources.h"
 
 namespace World {
@@ -31,6 +28,4 @@ namespace World {
 		vector<MeshRef> m_pMeshes;
 	}; // end class ResourceManager
 
-}; // end namespace World
-
-#endif
+} // end namespace World

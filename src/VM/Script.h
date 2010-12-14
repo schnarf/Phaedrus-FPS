@@ -3,8 +3,7 @@
  * Virtual Machine script object. Internally corresponds to lua scripts.
  */
  
-#ifndef _VM_SCRIPT_H_
-#define _VM_SCRIPT_H_
+#pragma once
 
 namespace VM {
 
@@ -12,8 +11,6 @@ namespace VM {
 	
 	class Script {
 	public:
-		
-		
 		//! Get the script's code
 		const string& GetCode() const;
 		
@@ -31,6 +28,5 @@ namespace VM {
 		friend class VM;
 	}; // end class Script
 
-}; // end namespace VM
+} // end namespace VM
 
-#endif

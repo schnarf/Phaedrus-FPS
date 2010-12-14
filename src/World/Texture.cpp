@@ -3,7 +3,6 @@
 #include "World/Resources.h"
 #include "System/VFS.h"
 #include "Render/GL.h"
-#include <SDL.h>
 #include "SDL_image/SDL_image.h"
 
 //==================================================

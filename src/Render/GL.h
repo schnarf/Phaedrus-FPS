@@ -1,3 +1,9 @@
+/* Render/GL.h
+ *
+ * This is the file to include for OpenGL headers, since
+ * they can be in different places on different platforms
+ */
+
 #pragma once
 
 #if defined(_MSC_VER)

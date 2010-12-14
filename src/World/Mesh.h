@@ -1,7 +1,9 @@
-#ifndef _WORLD_MESH_H_
-#define _WORLD_MESH_H_
+/* World/Mesh.h
+ *
+ * Holds geometry for a 3d object in the world
+ */
+#pragma once
 
-#include "common.h"
 #include "Math/Vertex.h"
 #include "World/Resources.h"
 
@@ -58,5 +60,3 @@ namespace World {
 	typedef shared_ptr<Mesh> MeshRef;
 
 }; // end namespace World
-
-#endif

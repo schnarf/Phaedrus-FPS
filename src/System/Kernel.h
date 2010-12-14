@@ -1,3 +1,8 @@
+/* System/Kernel.h
+ *
+ * Manages all the tasks in the engine
+ */
+
 #pragma once
 
 namespace Render { class Render; }
@@ -53,6 +58,6 @@ namespace System {
 		
 		//! Our world
 		shared_ptr<World::World> m_pWorld;
-	};
+	}; // end class Kernel
 
-};
+} // end namespace System

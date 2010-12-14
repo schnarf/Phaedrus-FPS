@@ -1,7 +1,10 @@
-#ifndef _WORLD_PLAYERENTITY_H_
-#define _WORLD_PLAYERENTITY_H_
+/* World/PlayerEntity.h
+ *
+ * Implementation of a player in the world
+ */
 
-#include "common.h"
+#pragma once
+
 #include "World/Entity.h"
 
 namespace World {
@@ -23,6 +26,4 @@ namespace World {
 		Math::Vector m_eyeOffset;
 	}; // end class PlayerEntity
 	
-}; // end namespace World
-
-#endif
+} // end namespace World

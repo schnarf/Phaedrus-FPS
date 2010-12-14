@@ -1,7 +1,6 @@
 #include "common.h"
 #include <iostream>
 #include "System/Kernel.h"
-#include <SDL.h>
 
 using namespace std;
 

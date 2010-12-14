@@ -3,16 +3,11 @@
  * Contains the entire game state
  */
 
-#ifndef _WORLD_WORLD_H_
-#define _WORLD_WORLD_H_
+#pragma once
 
-#define VM_META_STAGE 0
-
-#include "common.h"
 #include "World/Entity.h"
 #include "Math/Vector.h"
 #include "World/WorldUpdater.h"
-//#include "System/Timer.h"
 
 namespace World {
 	
@@ -66,7 +61,4 @@ namespace World {
 		
 	}; // end class World
 	
-}; // end namespace World
-
-
-#endif
+} // end namespace World

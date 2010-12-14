@@ -1,7 +1,10 @@
-#ifndef _WORLD_TEXTURE_H_
-#define _WORLD_TEXTURE_H_
+/* World/Texture.h
+ *
+ * A texture resource, with bindings to the rendering engine
+ */
 
-#include "common.h"
+#pragma once
+
 #include "Render/GL.h"
 
 namespace World {
@@ -40,7 +43,4 @@ namespace World {
 	
 	typedef shared_ptr<Texture> TextureRef;
 
-}; // end namespace World
-
-#endif
-
+} // end namespace World

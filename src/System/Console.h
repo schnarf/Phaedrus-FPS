@@ -1,5 +1,9 @@
-#ifndef _SYSTEM_CONSOLE_H_
-#define _SYSTEM_CONSOLE_H_
+/* System/Console.h
+ *
+ * Interface for printing text to the screen
+ */
+
+#pragma once
 
 namespace Math { class Vector; }
 
@@ -13,8 +17,6 @@ namespace System {
 		void PrintVector( const Math::Vector& vec );
 		void PrintFloat( float val );
 	
-	};
+	} // end namespace Console
 	
-}; // end namespace System
-
-#endif
+} // end namespace System

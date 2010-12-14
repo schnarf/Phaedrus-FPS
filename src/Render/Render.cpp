@@ -2,7 +2,6 @@
 #include "common.h"
 
 #include "Render/GL.h"
-#include <SDL.h>
 
 #include "System/Kernel.h"
 #include "System/Window.h"

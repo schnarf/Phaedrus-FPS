@@ -4,8 +4,7 @@
  * and raw files to be opened
  */
 
-#ifndef _SYSTEM_VFS_H_
-#define _SYSTEM_VFS_H_
+#pragma once
 
 namespace System {
 	
@@ -25,6 +24,4 @@ namespace System {
 	private:
 	}; // end class VFS
 	
-}; // end namespace System
-
-#endif
+} // end namespace System

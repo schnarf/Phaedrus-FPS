@@ -1,7 +1,9 @@
-#ifndef _MATH_VECTOR_H_
-#define _MATH_VECTOR_H_
+/* Math/Vector.h
+ *
+ * A vector in 3d space
+ */
 
-#include "common.h"
+#pragma once
 
 namespace Math {
 
@@ -54,7 +56,4 @@ namespace Math {
 		float x, y, z;
 	}; // end class Vector
 	
-}; // end namespace Math
-
-
-#endif
+} // end namespace Math

@@ -1,8 +1,9 @@
-#ifndef _SYSTEM_TASK_H
-#define _SYSTEM_TASK_H
+/* System/Task.h
+ *
+ * A thread of execution in the kernel
+ */
 
-#include "common.h"
-#include <boost/thread/thread.hpp>
+#pragma once
 
 namespace System {
 
@@ -62,10 +63,8 @@ namespace System {
 		bool m_bRunning;
 		//! The kernel
 		Kernel* m_pKernel;
-	};
+	}; // end class Task
 	
 	inline Kernel* Task::GetKernel() const { return m_pKernel; }
 
-};
-
-#endif
+} // end namespace System

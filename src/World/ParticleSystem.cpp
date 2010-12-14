@@ -1,6 +1,5 @@
 #include "common.h"
 #include "World/ParticleSystem.h"
-#include <cmath>
 #include "Render/GL.h"
 
 namespace {

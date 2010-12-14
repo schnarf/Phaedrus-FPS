@@ -1,7 +1,6 @@
 #include "common.h"
 #include "System/Input.h"
 #include "System/Kernel.h"
-#include <SDL.h>
 
 
 //==================================================

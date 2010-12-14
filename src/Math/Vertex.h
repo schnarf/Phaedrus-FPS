@@ -1,7 +1,9 @@
-#ifndef _MATH_VERTEX_H_
-#define _MATH_VERTEX_H_
+/* Math/Vertex.h
+ *
+ * A point in 3d space
+ */
 
-#include "common.h"
+#pragma once
 
 namespace Math {
 
@@ -32,6 +34,4 @@ namespace Math {
 	
 	typedef shared_ptr<Vertex> VertexRef;
 	
-}; // end namespace Math
-
-#endif
+} // end namespace Math

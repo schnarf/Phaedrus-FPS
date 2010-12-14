@@ -1,7 +1,10 @@
-#ifndef _WORLD_PARTICLESYSTEM_H_
-#define _WORLD_PARTICLESYSTEM_H_
+/* World/ParticleSystem.h
+ *
+ * Emits particles with physics
+ */
 
-#include "common.h"
+#pragma once
+
 #include "Math/Vector.h"
 
 namespace World {
@@ -30,6 +33,4 @@ namespace World {
 		vector<ParticleInfo> m_particles;
 	}; // end class ParticleSystem
 
-}; // end namespace World
-
-#endif
+} // end namespace World

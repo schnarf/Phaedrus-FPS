@@ -4,10 +4,8 @@
  * and other information
  */
 
-#ifndef _WORLD_LEVEL_H_
-#define _WORLD_LEVEL_H_
+#pragma once
 
-#include "common.h"
 #include "World/Resources.h"
 
 namespace World {
@@ -53,6 +51,4 @@ namespace World {
 		vector<LevelSurface> m_surfaces;
 	}; // end class Level
 	
-}; // end class World
-
-#endif
+} // end namespace World

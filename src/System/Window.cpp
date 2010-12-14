@@ -3,7 +3,6 @@
 #include "System/Kernel.h"
 #include "System/Input.h"
 #include "Render/Render.h"
-#include <SDL.h>
 #include <iostream>
 
 System::Input* System::Window::m_pInput= NULL;

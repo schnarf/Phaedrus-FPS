@@ -1,8 +1,9 @@
-#ifndef _SYSTEM_WINDOW_H_
-#define _SYSTEM_WINDOW_H_
+/* System/Window.h
+ *
+ * Creates a window with a rendering context
+ */
 
-#include "common.h"
-#include <SDL.h>
+#pragma once
 
 namespace Render { class Render; }
 
@@ -46,6 +47,4 @@ namespace System {
 		static Input* m_pInput;
 	}; // end class Window
 
-}; // end namespace System
-
-#endif
+} // end namespace System

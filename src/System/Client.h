@@ -5,6 +5,8 @@
  * Largely concerned with updating the local player.
  */
  
+#pragma once
+
 namespace System {
 
 	class Client {
@@ -12,4 +14,4 @@ namespace System {
 	private:
 	}; // end class Client
 
-}; // end namespace System
+} // end namespace System

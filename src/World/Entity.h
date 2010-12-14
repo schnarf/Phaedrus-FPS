@@ -2,14 +2,11 @@
  *
  * Base class for all things
  */
+#pragma once
 
-#ifndef _WORLD_ENTITY_H_
-#define _WORLD_ENTITY_H_
-
-#include "common.h"
 #include "Math/Vector.h"
 #include "World/Mesh.h"
-#include <iostream>
+
 namespace World {
 
 	typedef unsigned int EntityID;
@@ -139,4 +136,3 @@ inline World::EntityType World::Entity::GetType() const { return m_type; }
 inline bool World::Entity::IsFlag( EntityFlag flag ) const { return (m_flags & uint(flag)) != 0; }
 //! Set a flag
 inline void World::Entity::SetFlag( EntityFlag flag ) { m_flags|= uint(flag); }
-#endif
