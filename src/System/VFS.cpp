@@ -32,8 +32,7 @@ System::VFS::VFS() {
 	PHYSFS_init( NULL );
 	
 	// Hardcoded paths for now
-	PHYSFS_addToSearchPath( "/Users/aaron/Desktop/", 1 );
-	PHYSFS_addToSearchPath( "/Users/aaron/Documents/Code/PhaedrusFPS/Resources/", 1 );
+	PHYSFS_addToSearchPath( "/Users/aaron/Documents/Phaedrus-FPS/Resources/", 1 );
 }
 
 
