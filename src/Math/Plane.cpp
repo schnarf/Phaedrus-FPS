@@ -1,3 +1,4 @@
+#include "common.h"
 #include <cmath>
 #include "Math/Plane.h"
 #include "Math/Vector.h"

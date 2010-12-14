@@ -6,6 +6,6 @@
  *  Copyright 2009 __MyCompanyName__. All rights reserved.
  *
  */
-
+#include "common.h"
 #include "Client.h"
 

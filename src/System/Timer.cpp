@@ -1,3 +1,4 @@
+#include "common.h"
 #include "System/Timer.h"
 
 #include <SDL.h>

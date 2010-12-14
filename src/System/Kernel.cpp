@@ -1,3 +1,4 @@
+#include "common.h"
 #include "System/Kernel.h"
 #include "System/Task.h"
 #include "System/Window.h"
@@ -65,7 +66,7 @@ void System::Kernel::run() {
 	}
 	
 	// Load the world
-	m_pWorld.reset( new World::World() );
+	m_pWorld.reset( new World::World );
 	m_pWorld->Load();
 	
 	// A test
@@ -86,6 +87,7 @@ void System::Kernel::run() {
 		(*it)->Stop();
 	}
 }
+
 
 //==================================================
 //! Adds a task to the kernel, called by the task's constructor

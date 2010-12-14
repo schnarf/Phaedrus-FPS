@@ -62,7 +62,7 @@ namespace World {
 		
 		PlayerEntity* m_pLocalPlayer;
 		
-		uint m_oldTickCount;
+		uint32 m_oldTickCount;
 		
 	}; // end class World
 	

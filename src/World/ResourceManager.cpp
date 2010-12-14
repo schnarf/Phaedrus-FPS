@@ -1,3 +1,4 @@
+#include "common.h"
 #include "World/Resources.h"
 #include "World/ResourceManager.h"
 

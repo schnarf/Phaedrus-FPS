@@ -22,14 +22,14 @@ INCLUDE_DIRECTORIES(../lib/SDL_image)
 # Add all our cpp and h files to the list of sources
 FILE(GLOB phaedrus_sources 
 	*.cpp
+	common.cpp
+	common.h
 	Math/*.cpp
 	Math/*.h
 	Render/*.cpp
 	Render/*.h
 	System/*.cpp
 	System/*.h
-	Util/*.cpp
-	Util/*.h
 	VM/*.cpp
 	VM/*.h
 	World/*.cpp
@@ -51,6 +51,13 @@ SOURCE_GROUP(World World/*)
 
 ADD_EXECUTABLE(phaedrusfps ${phaedrus_sources})
 ADD_DEPENDENCIES(phaedrusfps lua luabind physfs-static sdl_image)
+
+
+# Set common.h as a precompiled header
+IF(MSVC)
+	SET_TARGET_PROPERTIES(phaedrusfps PROPERTIES COMPILE_FLAGS "/Yucommon.h")
+	SET_SOURCE_FILES_PROPERTIES(common.cpp PROPERTIES COMPILE_FLAGS "/Yccommon.h")
+ENDIF(MSVC)
 
 # Link against our libraries
 TARGET_LINK_LIBRARIES(phaedrusfps lua luabind physfs-static sdl_image ${SDL_LIBRARY} ${OPENGL_LIBRARIES})

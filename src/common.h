@@ -1,30 +1,20 @@
-#ifndef _COMMON_H_
-#define _COMMON_H_
-
-#define __DEBUG_BUILD__ 1
+#pragma once
 
 #include <string>
-using std::string;
-
 #include <deque>
-using std::deque;
-
 #include <vector>
-using std::vector;
-
 #include <map>
-using std::map; using std::multimap;
-
 #include <memory>
-using std::auto_ptr;
+// Import the whole std namespace. Good idea?
+using namespace std;
 
-#include <boost/shared_ptr.hpp>
-using boost::shared_ptr;
-
-#include <assert.h>
+// TODO: Don't need boost shared_ptr if we have tr1 or c++0x
+//#include <boost/shared_ptr.hpp>
+#include <cassert>
 
 #include <boost/thread/thread.hpp>
 #include <boost/thread/mutex.hpp>
+
 typedef boost::mutex Mutex;
 typedef boost::mutex::scoped_lock ScopedLock;
 typedef boost::thread::id ThreadID;
@@ -42,7 +32,7 @@ enum Error {
 
 #include "common_checked_type.h"
 
-#if __DEBUG_BUILD__
+#ifdef _DEBUG
 	#include <iostream>
 	
 	#define DebugPrint( strError ) \
@@ -53,5 +43,3 @@ enum Error {
 
 // Include the engine globals
 #include "globals.h"
-
-#endif

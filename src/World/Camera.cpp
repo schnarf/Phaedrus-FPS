@@ -7,5 +7,6 @@
  *
  */
 
+#include "common.h"
 #include "Camera.h"
 

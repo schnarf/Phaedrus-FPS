@@ -1,3 +1,4 @@
+#include "common.h"
 #include "System/Window.h"
 #include "System/Kernel.h"
 #include "System/Input.h"

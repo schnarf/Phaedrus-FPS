@@ -1,7 +1,4 @@
-#ifndef _SYSTEM_KERNEL_H_
-#define _SYSTEM_KERNEL_H_
-
-#include "common.h"
+#pragma once
 
 namespace Render { class Render; }
 namespace boost { class thread; }
@@ -27,11 +24,10 @@ namespace System {
 		
 		inline bool IsRunning() const { return m_bIsRunning; }
 		
-		inline Render::Render* GetTaskRender() const { return m_pRender.get(); }
-		inline System::Input* GetTaskInput() const { return m_pInput.get(); }
-		inline World::WorldUpdater* GetTaskWorldUpdater() const { return m_pWorldUpdater.get(); }
-		
-		World::World* GetWorld() const;
+		Render::Render* GetTaskRender() const { return m_pRender.get(); }
+		System::Input* GetTaskInput() const { return m_pInput.get(); }
+		World::WorldUpdater* GetTaskWorldUpdater() const { return m_pWorldUpdater.get(); }
+		World::World* GetWorld() const { return m_pWorld.get(); }
 		
 	private:
 		//! Adds a task to the kernel, called by the task's constructor
@@ -47,20 +43,16 @@ namespace System {
 		vector<Task*> m_pTasks;
 		
 		//! Our input task
-		auto_ptr<System::Input> m_pInput;
+		shared_ptr<System::Input> m_pInput;
 		
 		//! Our rendering task
-		auto_ptr<Render::Render> m_pRender;
+		shared_ptr<Render::Render> m_pRender;
 		
 		//! Our world updater task
-		auto_ptr<World::WorldUpdater> m_pWorldUpdater;
+		shared_ptr<World::WorldUpdater> m_pWorldUpdater;
 		
 		//! Our world
-		auto_ptr<World::World> m_pWorld;
+		shared_ptr<World::World> m_pWorld;
 	};
-	
-	inline World::World* System::Kernel::GetWorld() const { return m_pWorld.get(); }
 
 };
-
-#endif

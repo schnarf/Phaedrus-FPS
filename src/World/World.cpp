@@ -1,3 +1,4 @@
+#include "common.h"
 #include "World/World.h"
 #include "World/Entity.h"
 #include "World/PlayerEntity.h"
