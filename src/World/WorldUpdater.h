@@ -29,7 +29,7 @@ namespace World {
 		
 	private:
 		//! The timestep when we last updates
-		uint m_uLastTimestep;
+		uint64 m_uLastTimestep;
 		
 		//! Do physics
 		void doPhysics();

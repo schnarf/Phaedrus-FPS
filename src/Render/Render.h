@@ -17,7 +17,7 @@ namespace Render {
 		~Render();
 		
 		//! Get the last time slice in milliseconds
-		uint GetLastTimeslice() const;
+		uint64 GetLastTimeslice() const;
 		
 	protected:
 		//! Called whenever the thread is started
@@ -33,12 +33,12 @@ namespace Render {
 		System::Window* m_pWindow;
 		
 		//! The last time slice, in milliseconds
-		uint m_uLastTimeslice;
+		uint64 m_uLastTimeslice;
 	}; // end class Render
 
 }; // end namespace Render
 
 //! Get the last time slice in milliseconds
-inline uint Render::Render::GetLastTimeslice() const { return m_uLastTimeslice; }
+inline uint64 Render::Render::GetLastTimeslice() const { return m_uLastTimeslice; }
 
 #endif

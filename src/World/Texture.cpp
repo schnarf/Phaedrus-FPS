@@ -40,7 +40,8 @@ World::Texture::Texture( const string& strFilename ) :
 		else assert( false );
 	} else if( bpp == 3 ) {
 		if( bRGB ) fmt= GL_RGB;
-		else assert( false );
+		else fmt= GL_RGB;
+		//else assert( false );
 	} else {
 		assert( false );
 	}

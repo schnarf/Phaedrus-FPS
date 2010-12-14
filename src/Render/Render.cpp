@@ -91,7 +91,7 @@ void Render::Render::process() {
 	if( !GetKernel()->IsRunning() ) return;
 	
 	// Begin our timeslice
-	uint uStartTicks= System::GetTickCountMillis();
+	uint64 uStartTicks= System::GetTickCountMillis();
 
 	// Clear
 	glClearColor( 0.0, 0.0, 0.0, 0.0 );
@@ -117,7 +117,8 @@ void Render::Render::process() {
 	assert( glGetError() == GL_NO_ERROR );
 	
 	// End our timeslice
-	uint uEndTicks= System::GetTickCountMillis();
+	uint64 uEndTicks= System::GetTickCountMillis();
+	assert( uEndTicks >= uStartTicks );
 	m_uLastTimeslice= uEndTicks - uStartTicks;
 }
 

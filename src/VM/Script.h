@@ -12,8 +12,7 @@ namespace VM {
 	
 	class Script {
 	public:
-		//! Initialize from a script file
-		Script( string strFilename, VM* pVM );
+		
 		
 		//! Get the script's code
 		const string& GetCode() const;
@@ -24,6 +23,12 @@ namespace VM {
 		string m_code;
 		VM* m_pVM;
 		string m_strFilename;
+
+		//! Initialize from a script file
+		Script( const string& strFilename, VM* pVM );
+
+		//! Only the VM can create scriptss
+		friend class VM;
 	}; // end class Script
 
 }; // end namespace VM

@@ -136,7 +136,7 @@ inline void World::Entity::SetAngularAcceleration( const Math::Vector& angacc ) 
 inline World::EntityType World::Entity::GetType() const { return m_type; }
 
 //! Check if a flag is set
-inline bool World::Entity::IsFlag( EntityFlag flag ) const { return m_flags & flag; }
+inline bool World::Entity::IsFlag( EntityFlag flag ) const { return (m_flags & uint(flag)) != 0; }
 //! Set a flag
-inline void World::Entity::SetFlag( EntityFlag flag ) { m_flags|= flag; }
+inline void World::Entity::SetFlag( EntityFlag flag ) { m_flags|= uint(flag); }
 #endif

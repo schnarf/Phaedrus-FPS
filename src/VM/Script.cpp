@@ -6,7 +6,7 @@
 //==================================================
 //! Initialize from a script file
 //==================================================
-VM::Script::Script( string strFilename, VM* pVM ) :
+VM::Script::Script( const string& strFilename, VM* pVM ) :
 	m_pVM(pVM),
 	m_strFilename(strFilename) {
 	// Load the script
