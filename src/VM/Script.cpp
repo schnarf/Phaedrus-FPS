@@ -14,7 +14,8 @@ VM::Script::Script( string strFilename, VM* pVM ) :
 	Error err= g_VFS.LoadRaw( strFilename, script );
 	assert( err == ERROR_OK );
 	
-	// Just reinterpret the string of bytes as chars
+	// Just reinterpret the string of bytes as chars, appending a NULL terminator first
+	script.push_back( '\0' );
 	m_code= reinterpret_cast<char*>(&script[0]);
 	
 	// Now register with the VM
