@@ -8,7 +8,7 @@ vertices 8
 6: -100, -100, -100
 7: -100, 100, -100
 textures 1
-0: default.bmp
+0: default.png
 surfaces 2
 0: 4, 0
 4, 0, 0

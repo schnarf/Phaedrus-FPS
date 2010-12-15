@@ -3,7 +3,7 @@
 #include "World/Resources.h"
 #include "System/VFS.h"
 #include "Render/GL.h"
-#include "SDL_image/SDL_image.h"
+#include "SDL_image.h"
 
 //==================================================
 //! Construct a texture from a file
@@ -18,11 +18,11 @@ World::Texture::Texture( const string& strFilename ) :
 	
 	// Load the image
 	SDL_Surface* surface;
-	SDL_RWops* rwops= SDL_RWFromMem(&raw[0], raw.size());
+	SDL_RWops* rwops= SDL_RWFromConstMem( &raw[0], raw.size() );
 	assert( rwops != NULL );
 	
-	// Should do some type detection here
-	surface= SDL_LoadBMP_RW( rwops, 1 );
+	// Note IMG_Load_RW will free rwops
+	surface= IMG_Load_RW( rwops, 1 );
 	assert( surface != NULL );
 	
 	// Get the dimensions
