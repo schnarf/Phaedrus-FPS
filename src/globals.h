@@ -8,7 +8,8 @@
 namespace System { class VFS; }
 namespace World { class ResourceManager; }
 namespace VM { class VM; }
+namespace System { class Kernel; }
 
-extern System::VFS g_VFS;
-extern World::ResourceManager g_ResourceManager;
-extern VM::VM g_VM;
+extern System::VFS* g_pVFS;
+extern World::ResourceManager* g_pResourceManager;
+extern VM::VM* g_pVM;

@@ -4,6 +4,7 @@
 #include "System/Window.h"
 #include "System/Input.h"
 #include "Render/Render.h"
+#include "World/ResourceManager.h"
 #include "World/WorldUpdater.h"
 #include "World/World.h"
 #include "VM/VM.h"
@@ -13,44 +14,44 @@
 //==================================================
 //! Constructor, initializes the kernel if necessary
 //==================================================
-System::Kernel::Kernel() {
+System::Kernel::Kernel() :
+	m_kernelSentry(this),
+	m_pVFS(new System::VFS),
+	m_pVM(new VM::VM),
+	m_pResourceManager(new World::ResourceManager),
+	m_bRunning(false) {
+
+	m_kernelSentry.Register();
 	
-}
+	m_pRender.reset( new Render::Render(this) );
+	m_pInput.reset( new System::Input(this) );
+	m_pWorldUpdater.reset( new World::WorldUpdater(this) );
+
+} // end Kernel::Kernel()
+
 
 //==================================================
 //! Destructor, deinitializes the kernel
 //==================================================
 System::Kernel::~Kernel() {
-
-}
-
-//==================================================
-//! Starts the kernel
-//==================================================
-void System::Kernel::Start() {
-	
-	// Create the rendering task
-	m_pRender.reset( new Render::Render(this) );
-	
-	// Create the input task
-	m_pInput.reset( new System::Input(this) );
-	
-	// Create the world update task
-	m_pWorldUpdater.reset( new World::WorldUpdater(this) );
-	
-	// Start our main loop
-	m_bIsRunning= true;
-	
-	run();
-}
-
-//==================================================
-//! Stops the kernel
-//==================================================
-void System::Kernel::Stop() {
 	// Stop running
-	m_bIsRunning= false;
-}
+	m_bRunning= false;
+} // end Kernel::~Kernel()
+
+
+//! Starts the kernel's main loop
+void System::Kernel::Start() {
+	assert( !m_bRunning );
+	m_bRunning= true;
+	run();
+} // end Kernel::Start()
+
+
+//! Stops the kernel's main loop
+void System::Kernel::Stop() {
+	m_bRunning= false;
+} // end Kernel::Stop()
+
 
 //==================================================
 //! Our kernel's main loop
@@ -65,7 +66,7 @@ void System::Kernel::run() {
 	m_pWorld.reset( new World::World );
 	if( !m_pWorld->IsLoaded() ) die( "Could not load the world!" );
 	
-	while( m_bIsRunning ) {
+	while( m_bRunning ) {
 		// Run all tasks
 		// TODO: Run separate threads first so we don't wait?
 		//       Really need to work out an order
@@ -78,10 +79,7 @@ void System::Kernel::run() {
 	for( vector<Task*>::iterator it= m_pTasks.begin(); it != m_pTasks.end(); ++it ) {
 		(*it)->Stop();
 	}
-	
-	// Unload the world
-	m_pWorld.reset();
-}
+} // end Kernel::run()
 
 
 //==================================================
@@ -94,6 +92,30 @@ void System::Kernel::addTask( System::Task* pTask ) {
 
 //! Stops our kernel with a fatal error
 void System::Kernel::die( const string& strError ) {
-	g_VM.Call<void>( "PrintError", (string("Kernel::die():") + strError).c_str() );
+	g_pVM->Call<void>( "PrintError", (string("Kernel::die():") + strError).c_str() );
 	Stop();
 } // end Kernel::die()
+
+
+//! Initialize with kernel
+System::Kernel::KernelSentry::KernelSentry( Kernel* pKernel ) : m_pKernel(pKernel) {}
+
+//! Register the kernel's globals
+void System::Kernel::KernelSentry::Register() {
+	assert( g_pVFS == NULL );
+	g_pVFS= m_pKernel->GetVFS();
+	assert( g_pResourceManager == NULL );
+	g_pResourceManager= m_pKernel->GetResourceManager();
+	assert( g_pVM == NULL );
+	g_pVM= m_pKernel->GetVM();
+} // end KernelSentry::Register()
+
+//! Unregister the kernel's globals
+System::Kernel::KernelSentry::~KernelSentry() {
+	assert( g_pVM == m_pKernel->GetVM() );
+	g_pVM= NULL;
+	assert( g_pResourceManager == m_pKernel->GetResourceManager() );
+	g_pResourceManager= NULL;
+	assert( g_pVFS == m_pKernel->GetVFS() );
+	g_pVFS= NULL;
+} // end KernelSentry::~KernelSentry()

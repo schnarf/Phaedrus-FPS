@@ -13,7 +13,7 @@ World::Texture::Texture( const string& strFilename ) :
 	
 	// Load the file from the VFS, this can throw an exception
 	vector<byte> raw;
-	g_VFS.LoadRaw( strFilename, raw );
+	g_pVFS->LoadRaw( strFilename, raw );
 	
 	// Load the image
 	SDL_Surface* surface;

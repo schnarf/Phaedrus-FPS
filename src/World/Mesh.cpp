@@ -234,7 +234,7 @@ void World::Mesh::loadFromMD3( const string& strFilename ) {
 
 	// Load the file from the VFS, this can throw an exception
 	vector<byte> raw;
-	g_VFS.LoadRaw( strFilename, raw );
+	g_pVFS->LoadRaw( strFilename, raw );
 	
 	bing:
 	byte* pRead= &raw[0];

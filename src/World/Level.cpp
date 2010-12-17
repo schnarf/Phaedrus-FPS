@@ -13,7 +13,7 @@ World::Level::Level( const string& strFilename ) {
 
 	// Load the file from the VFS, this can throw an exception
 	vector<byte> raw;
-	g_VFS.LoadRaw( strFilename, raw );
+	g_pVFS->LoadRaw( strFilename, raw );
 	
 	// From the bytes, turn it into an array of lines
 	string text((char*)&raw[0]);
@@ -84,7 +84,7 @@ World::Level::Level( const string& strFilename ) {
 		if( i != j ) THROW_EXCEPTION( FileParseException() );
 		
 		m_surfaces[i].uNumVertices= uNumSurfVtx;
-		m_surfaces[i].pTexture= g_ResourceManager.GetTexture( textures[uTexture] );
+		m_surfaces[i].pTexture= g_pResourceManager->GetTexture( textures[uTexture] );
 		m_surfaces[i].pVertices.clear();
 		m_surfaces[i].textureCoords.clear();
 		

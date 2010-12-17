@@ -2,9 +2,6 @@
 #include "World/Resources.h"
 #include "World/ResourceManager.h"
 
-// Global resource manager
-World::ResourceManager g_ResourceManager;
-
 //==================================================
 //! Constructor
 //==================================================

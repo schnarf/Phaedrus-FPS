@@ -12,9 +12,6 @@
 
 using namespace luabind;
 
-// Global VM
-VM::VM g_VM;
-
 namespace {
 
 	int add_file_and_line( lua_State* L ) {
@@ -34,7 +31,8 @@ namespace {
 	   return 1;
 	}
 
-}; // end anonymous namespace
+} // end anonymous namespace
+
 
 //==================================================
 //! Register a script, called by the Script constructor
@@ -144,7 +142,7 @@ VM::VM::VM() {
 void VM::VM::Execute( const string& code ) {
 	try {
 		luaL_dostring( m_pLuaState, code.c_str() );
-	} catch(luabind::error& e ) {
+	} catch( luabind::error& e ) {
 		std::cout << e.what() << std::endl;
 		string strError= lua_tostring( e.state(), -1 );
 		std::cout << strError << std::endl;

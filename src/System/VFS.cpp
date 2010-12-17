@@ -1,9 +1,6 @@
 #include "common.h"
 #include "System/VFS.h"
 #include "physfs.h"
-
-// Global VFS
-System::VFS g_VFS;
 		
 //==================================================
 //! Load a file from the VFS into memory, can throw a FileIOException

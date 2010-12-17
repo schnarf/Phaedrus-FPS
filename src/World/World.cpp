@@ -24,7 +24,7 @@ World::World::World() :
 		m_pLevel.reset( new Level("test.map") );
 	} catch( const FileIOException& e ) {
 		// If we failed to load the level, log the error and exit
-		g_VM.Call<void>( "PrintError", "Encountered a file IO error trying to load the level." );
+		g_pVM->Call<void>( "PrintError", "Encountered a file IO error trying to load the level." );
 		return;
 	}
 	// Spawn things
@@ -36,18 +36,18 @@ World::World::World() :
 	m_bIsLoaded= true;
 	
 	// Register with VM
-	g_VM.SetWorld( this );
+	g_pVM->SetWorld( this );
 	
 	// Load and call the startup script, this can throw
 	try {
-		g_VM.LoadScript( "WorldStartup.lua" );
+		g_pVM->LoadScript( "WorldStartup.lua" );
 	} catch( const FileIOException& e ) {
 		// If we failed to load the world startup script, just print a message
-		g_VM.Call<void>( "PrintError", "Encountered a file IO error trying to load the world startup script" );
+		g_pVM->Call<void>( "PrintError", "Encountered a file IO error trying to load the world startup script" );
 		return;
 	}
 	
-	g_VM.Call<void>( "WorldStartup" );
+	g_pVM->Call<void>( "WorldStartup" );
 }
 
 
@@ -57,7 +57,7 @@ World::World::World() :
 World::World::~World() {
 	if( !IsLoaded() ) return;
 	
-	g_VM.SetWorld( NULL );
+	g_pVM->SetWorld( NULL );
 
 	m_bIsLoaded= false;
 }

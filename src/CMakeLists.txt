@@ -41,6 +41,8 @@ FILE(GLOB phaedrus_sources
 	common.cpp
 	common.h
 	common_exception.h
+	globals.cpp
+	globals.h
 	Math/*.cpp
 	Math/*.h
 	Render/*.cpp

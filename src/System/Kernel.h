@@ -7,12 +7,12 @@
 
 namespace Render { class Render; }
 namespace boost { class thread; }
-namespace World { class World; class WorldUpdater; }
+namespace World { class ResourceManager; class World; class WorldUpdater; }
 namespace VM { class VM; }
 
 namespace System {
 
-	class Task; class Window; class Input;
+	class Task; class Window; class Input; class VFS;
 
 	class Kernel {
 		friend class Task;
@@ -21,13 +21,17 @@ namespace System {
 		Kernel();
 		//! Destructor, deinitializes the kernel
 		~Kernel();
-	
-		//! Starts the kernel
+
+		//! Starts the kernel's main loop
 		void Start();
-		//! Stops the kernel
+		//! Stops the kernel's main loop
 		void Stop();
 		
-		inline bool IsRunning() const { return m_bIsRunning; }
+		inline bool IsRunning() const { return m_bRunning; }
+
+		System::VFS* GetVFS() { return m_pVFS.get(); }
+		VM::VM* GetVM() { return m_pVM.get(); }
+		World::ResourceManager* GetResourceManager() { return m_pResourceManager.get(); }
 		
 		Render::Render* GetTaskRender() const { return m_pRender.get(); }
 		System::Input* GetTaskInput() const { return m_pInput.get(); }
@@ -42,22 +46,44 @@ namespace System {
 		void run();
 		
 		//! Is our kernel running
-		bool m_bIsRunning;
+		bool m_bRunning;
+
+		//! Handles registering and unregistering our globals
+		class KernelSentry {
+		public:
+			//! Initialize with kernel
+			KernelSentry( Kernel* pKernel );
+			//! Register the kernel's globals
+			void Register();
+			//! Unregister the kernel's globals
+			~KernelSentry();
+		private:
+			Kernel* m_pKernel;
+		}; // end class KernelSentry
+
+		KernelSentry m_kernelSentry;			//!< Our kernel sentry, to register and unregister our globals
 		
-		//! The kernel's tasks
-		vector<Task*> m_pTasks;
+		//! The virtual filesystem
+		shared_ptr<System::VFS> m_pVFS;
+		//! The resource manager
+		shared_ptr<World::ResourceManager> m_pResourceManager;
+		//! The virtual machine
+		shared_ptr<VM::VM> m_pVM;
+
+		//! Our rendering task
+		shared_ptr<Render::Render> m_pRender;
 		
 		//! Our input task
 		shared_ptr<System::Input> m_pInput;
-		
-		//! Our rendering task
-		shared_ptr<Render::Render> m_pRender;
 		
 		//! Our world updater task
 		shared_ptr<World::WorldUpdater> m_pWorldUpdater;
 		
 		//! Our world
 		shared_ptr<World::World> m_pWorld;
+		
+		//! The kernel's tasks
+		vector<Task*> m_pTasks;
 
 		//! Stops our kernel with a fatal error
 		void die( const string& strError );
