@@ -38,7 +38,6 @@ void System::Kernel::Start() {
 	// Create the world update task
 	m_pWorldUpdater.reset( new World::WorldUpdater(this) );
 	
-	
 	// Start our main loop
 	m_bIsRunning= true;
 	
@@ -51,9 +50,6 @@ void System::Kernel::Start() {
 void System::Kernel::Stop() {
 	// Stop running
 	m_bIsRunning= false;
-	
-	// Unload the world
-	m_pWorld->Unload();
 }
 
 //==================================================
@@ -67,11 +63,7 @@ void System::Kernel::run() {
 	
 	// Load the world
 	m_pWorld.reset( new World::World );
-	m_pWorld->Load();
-	
-	// A test
-	//VM::VM::Get()->Execute( "PrintUint(GetEntity(GetLocalPlayerID()):GetID())" );
-	//VM::VM::Get()->Execute( "vec = Vector(2.0, 3.0, 4.0);\n PrintFloat(vec:Length());\n PrintVector(vec:Normalize());\n" );
+	if( !m_pWorld->IsLoaded() ) die( "Could not load the world!" );
 	
 	while( m_bIsRunning ) {
 		// Run all tasks
@@ -86,6 +78,9 @@ void System::Kernel::run() {
 	for( vector<Task*>::iterator it= m_pTasks.begin(); it != m_pTasks.end(); ++it ) {
 		(*it)->Stop();
 	}
+	
+	// Unload the world
+	m_pWorld.reset();
 }
 
 
@@ -96,3 +91,9 @@ void System::Kernel::addTask( System::Task* pTask ) {
 	m_pTasks.push_back( pTask );
 }
 
+
+//! Stops our kernel with a fatal error
+void System::Kernel::die( const string& strError ) {
+	g_VM.Call<void>( "PrintError", (string("Kernel::die():") + strError).c_str() );
+	Stop();
+} // end Kernel::die()

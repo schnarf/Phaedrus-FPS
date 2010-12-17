@@ -232,10 +232,9 @@ namespace MD3 {
 //==================================================
 void World::Mesh::loadFromMD3( const string& strFilename ) {
 
-	// Load the file from the VFS
+	// Load the file from the VFS, this can throw an exception
 	vector<byte> raw;
-	Error err= g_VFS.LoadRaw( strFilename, raw );
-	assert( err == ERROR_OK );
+	g_VFS.LoadRaw( strFilename, raw );
 	
 	bing:
 	byte* pRead= &raw[0];

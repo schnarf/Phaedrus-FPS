@@ -16,11 +16,38 @@ using Math::Vector;
 //==================================================
 //! Constructor
 //==================================================
-World::World::World() {
-	m_bIsLoaded= false;
+World::World::World() :
+	m_bIsLoaded(false) {
+
+	// Load the level, this can throw
+	try {
+		m_pLevel.reset( new Level("test.map") );
+	} catch( const FileIOException& e ) {
+		// If we failed to load the level, log the error and exit
+		g_VM.Call<void>( "PrintError", "Encountered a file IO error trying to load the level." );
+		return;
+	}
+	// Spawn things
+	m_pLocalPlayer= SpawnEntity( ENTITY_PLAYER, Math::Vector(0.0f, 0.0f, 0.0f) )->ToPlayer();
+	
+	// Set timing
+	m_oldTickCount= System::GetTickCountMillis();
+
+	m_bIsLoaded= true;
 	
 	// Register with VM
 	g_VM.SetWorld( this );
+	
+	// Load and call the startup script, this can throw
+	try {
+		g_VM.LoadScript( "WorldStartup.lua" );
+	} catch( const FileIOException& e ) {
+		// If we failed to load the world startup script, just print a message
+		g_VM.Call<void>( "PrintError", "Encountered a file IO error trying to load the world startup script" );
+		return;
+	}
+	
+	g_VM.Call<void>( "WorldStartup" );
 }
 
 
@@ -28,7 +55,11 @@ World::World::World() {
 //! Non-inline destructor
 //==================================================
 World::World::~World() {
-	if( IsLoaded() ) Unload();
+	if( !IsLoaded() ) return;
+	
+	g_VM.SetWorld( NULL );
+
+	m_bIsLoaded= false;
 }
 
 
@@ -61,44 +92,11 @@ World::Entity* World::World::GetEntity( EntityID id ) const {
 	return m_entities[id].get();
 }
 
-//==================================================
-//! Load the world
-//==================================================
-void World::World::Load() {
-	// If we are loaded, then unload
-	if( IsLoaded() ) Unload();
-
-	// Load the level
-	m_pLevel= new Level("test.map");
-	m_bIsLoaded= true;
-	
-	// Spawn things
-	m_pLocalPlayer= SpawnEntity( ENTITY_PLAYER, Math::Vector(0.0f, 0.0f, 0.0f) )->ToPlayer();
-	
-	// Set timing
-	m_oldTickCount= System::GetTickCountMillis();
-	
-	// Call the startup script;
-	g_VM.LoadScript( "WorldStartup.lua" );
-	g_VM.Call<void>("WorldStartup");
-}
-		
-		
-//==================================================
-//! Deallocate
-//==================================================
-void World::World::Unload() {
-	if( !IsLoaded() ) return;
-	
-	delete m_pLevel;
-	m_bIsLoaded= false;
-}
-
 
 //==================================================
 //! Update positions, do physics, etc
 //==================================================
-void World::World::Tick( System::Ticks tickCount ) {
+void World::World::Tick( uint64 tickCount ) {
 	// float dt= tickCount - m_oldTickCount;
 	m_oldTickCount= tickCount;
 }

@@ -5,8 +5,6 @@
 
 namespace System {
 	
-	typedef uint64 Ticks;
-	
 	uint64 GetTickCountMillis();
 
 } // end namespace System

@@ -20,12 +20,6 @@ namespace World {
 		World();
 		//! Non-inline destructor
 		~World();
-	
-		//! Load the world
-		void Load();
-		
-		//! Deallocate
-		void Unload();
 		
 		//! Accessor for the local player
 		inline PlayerEntity* GetLocalPlayerEntity() const { return m_pLocalPlayer; }
@@ -34,7 +28,7 @@ namespace World {
 		inline bool IsLoaded() const { return m_bIsLoaded; }
 		
 		//! Accessor for level
-		Level* GetLevel() const { return m_pLevel; }
+		Level* GetLevel() const { return m_pLevel.get(); }
 		
 		//! Spawn an entity at a given position
 		EntityRef SpawnEntity( EntityType type, const Math::Vector& pos );
@@ -53,11 +47,11 @@ namespace World {
 		vector<EntityRef> m_entities;
 		
 		//! The currently loaded level
-		Level* m_pLevel;
+		shared_ptr<Level> m_pLevel;
 		
 		PlayerEntity* m_pLocalPlayer;
 		
-		uint32 m_oldTickCount;
+		uint64 m_oldTickCount;
 		
 	}; // end class World
 	

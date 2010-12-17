@@ -9,10 +9,9 @@
 VM::Script::Script( const string& strFilename, VM* pVM ) :
 	m_pVM(pVM),
 	m_strFilename(strFilename) {
-	// Load the script
+	// Load the script. This could throw an exception if it fails
 	vector<byte> script;
-	Error err= g_VFS.LoadRaw( strFilename, script );
-	assert( err == ERROR_OK );
+	g_VFS.LoadRaw( strFilename, script );
 	
 	// Just reinterpret the string of bytes as chars, appending a NULL terminator first
 	script.push_back( '\0' );

@@ -11,19 +11,18 @@
 World::Texture::Texture( const string& strFilename ) :
 	m_strFilename( strFilename ) {
 	
-	// Load the file from the VFS
+	// Load the file from the VFS, this can throw an exception
 	vector<byte> raw;
-	Error err= g_VFS.LoadRaw( strFilename, raw );
-	assert( err == ERROR_OK );
+	g_VFS.LoadRaw( strFilename, raw );
 	
 	// Load the image
 	SDL_Surface* surface;
 	SDL_RWops* rwops= SDL_RWFromConstMem( &raw[0], raw.size() );
-	assert( rwops != NULL );
+	if( rwops == NULL ) THROW_EXCEPTION( FileParseException() );
 	
 	// Note IMG_Load_RW will free rwops
 	surface= IMG_Load_RW( rwops, 1 );
-	assert( surface != NULL );
+	if( surface == NULL ) THROW_EXCEPTION( FileParseException() );
 	
 	// Get the dimensions
 	m_uWidth= surface->w;
@@ -39,10 +38,10 @@ World::Texture::Texture( const string& strFilename ) :
 		else assert( false );
 	} else if( bpp == 3 ) {
 		if( bRGB ) fmt= GL_RGB;
-		else fmt= GL_RGB;
-		//else assert( false );
+		else assert( false );
 	} else {
-		assert( false );
+		// Unsupported format
+		THROW_EXCEPTION( FileParseException() );
 	}
 	
 	// Create the OpenGL texture

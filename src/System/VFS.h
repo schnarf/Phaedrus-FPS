@@ -15,11 +15,8 @@ namespace System {
 		//! Non-inline destructor
 		~VFS();
 		
-		//! Load a file from the VFS into memory
-		Error LoadRaw( const string& strFilename, vector<byte>& data );
-		
-		//! Load a text file from the VFS into memory
-		Error LoadText( const string& strFilename, string& data );
+		//! Load a file from the VFS into memory, can throw a FileIOException
+		void LoadRaw( const string& strFilename, vector<byte>& data );
 		
 	private:
 	}; // end class VFS

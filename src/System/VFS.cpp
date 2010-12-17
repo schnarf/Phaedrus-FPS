@@ -6,21 +6,34 @@
 System::VFS g_VFS;
 		
 //==================================================
-//! Load a file from the VFS into memory
+//! Load a file from the VFS into memory, can throw a FileIOException
 //==================================================
-Error System::VFS::LoadRaw( const string& strFilename, vector<byte>& data ) {
+void System::VFS::LoadRaw( const string& strFilename, vector<byte>& data ) {
 	// Check to see if it exists
 	if( !PHYSFS_exists(strFilename.c_str()) ) {
-		return ERROR_FILE_DOES_NOT_EXIST;
+		THROW_EXCEPTION( FileReadException() << FileIOExceptionFilename(strFilename) );
 	}
 	
-	// Open the file, allocate, and read
-	PHYSFS_file* file= PHYSFS_openRead( strFilename.c_str() );
-	data.resize( PHYSFS_fileLength(file) );
-	PHYSFS_read( file, &data[0], sizeof(byte), data.size() );
-	PHYSFS_close( file );
-	
-	return ERROR_OK;
+	// Open the file
+	shared_ptr<PHYSFS_file> pFile( PHYSFS_openRead(strFilename.c_str()), PHYSFS_close );
+	if( pFile.get() == NULL ) {
+		THROW_EXCEPTION( FileReadException() << FileIOExceptionFilename(strFilename) );
+	}
+
+	// Try to read the number of bytes, fail if we can't
+	PHYSFS_sint64 nBytes= PHYSFS_fileLength( pFile.get() );
+	if( nBytes < 0 ) {
+		THROW_EXCEPTION( FileReadException() << FileIOExceptionFilename(strFilename) );
+	}
+	data.resize( unsigned(nBytes) );
+
+	// Try to read the data
+	PHYSFS_sint64 nBytesRead= PHYSFS_read( pFile.get(), &data[0], sizeof(byte), data.size() );
+	// Check for unexpected length
+	if( nBytesRead != nBytes ) {
+		data.resize( unsigned(nBytesRead) );
+		THROW_EXCEPTION( FileReadException() << FileIOExceptionFilename(strFilename) );
+	}
 }
 
 	

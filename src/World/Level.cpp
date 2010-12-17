@@ -10,11 +10,10 @@
 //! Load a level from a file
 //==================================================
 World::Level::Level( const string& strFilename ) {
-	
-	// Load the file from the VFS
+
+	// Load the file from the VFS, this can throw an exception
 	vector<byte> raw;
-	Error err= g_VFS.LoadRaw( strFilename, raw );
-	assert( err == ERROR_OK );
+	g_VFS.LoadRaw( strFilename, raw );
 	
 	// From the bytes, turn it into an array of lines
 	string text((char*)&raw[0]);
@@ -26,45 +25,63 @@ World::Level::Level( const string& strFilename ) {
 		
 	// Parse the vertices
 	uint uNumVertices;
-	sscanf( lines.front().c_str(), "vertices %d", &uNumVertices );
+	if( sscanf(lines.front().c_str(), "vertices %d", &uNumVertices) != 1 ) {
+		THROW_EXCEPTION( FileParseException() );
+	}
 	lines.pop_front();
+
 	m_vertices.resize( uNumVertices );
 	for( uint i=0; i<uNumVertices; ++i ) {
 		uint j;
 		float x, y, z;
-		sscanf( lines.front().c_str(), "%u: %f, %f, %f", &j, &x, &y, &z );
+		if( sscanf(lines.front().c_str(), "%u: %f, %f, %f", &j, &x, &y, &z) != 4 ) {
+			THROW_EXCEPTION( FileParseException() );
+		}
 		lines.pop_front();
-		assert( j == i );
+		
+		if( j != i ) THROW_EXCEPTION( FileParseException() );
+		
 		m_vertices[i]= LevelVertex( x, y, z );
 	}
 	
 	// Parse the textures
 	uint uNumTextures;
-	sscanf( lines.front().c_str(), "textures %d", &uNumTextures );
+	if( sscanf(lines.front().c_str(), "textures %d", &uNumTextures) != 1 ) {
+		THROW_EXCEPTION( FileParseException() );
+	}
 	lines.pop_front();
+
 	vector<string> textures(uNumTextures);
 	for( uint i=0; i<uNumTextures; ++i ) {
 		uint j;
 		char name[512];
-		sscanf( lines.front().c_str(), "%u: %511s", &j, name );
+		if( sscanf(lines.front().c_str(), "%u: %511s", &j, name) != 2 ) {
+			THROW_EXCEPTION( FileParseException() );
+		}
 		lines.pop_front();
-		assert( i == j );
+		
+		if( j != 0 ) THROW_EXCEPTION( FileParseException() );
 		
 		textures[i]= name;
 	}
 	
 	// Parse the surfaces
 	uint uNumSurfaces;
-	sscanf( lines.front().c_str(), "surfaces %u", &uNumSurfaces );
+	if( sscanf(lines.front().c_str(), "surfaces %u", &uNumSurfaces) != 1 ) {
+		THROW_EXCEPTION( FileParseException() );
+	}
 	lines.pop_front();
 	m_surfaces.resize( uNumSurfaces );
 	for( uint i=0; i<uNumSurfaces; ++i ) {
 		uint j;
 		uint uNumSurfVtx, uTexture;
 		char remainder[512];
-		sscanf( lines.front().c_str(), "%u: %u, %u", &j, &uNumSurfVtx, &uTexture );
+		if( sscanf(lines.front().c_str(), "%u: %u, %u", &j, &uNumSurfVtx, &uTexture) != 3 ) {
+			THROW_EXCEPTION( FileParseException() );
+		}
 		lines.pop_front();
-		assert( i == j );
+
+		if( i != j ) THROW_EXCEPTION( FileParseException() );
 		
 		m_surfaces[i].uNumVertices= uNumSurfVtx;
 		m_surfaces[i].pTexture= g_ResourceManager.GetTexture( textures[uTexture] );
@@ -75,9 +92,12 @@ World::Level::Level( const string& strFilename ) {
 		for( uint k=0; k<uNumSurfVtx; ++k ) {
 			uint iVtx;
 			float u, v;
-			sscanf( lines.front().c_str(), "%u, %f, %f", &iVtx, &u, &v );
+			if( sscanf(lines.front().c_str(), "%u, %f, %f", &iVtx, &u, &v) != 3 ) {
+				THROW_EXCEPTION( FileParseException() );
+			}
 			lines.pop_front();
-			assert( iVtx < uNumVertices );
+
+			if( iVtx >= uNumVertices ) THROW_EXCEPTION( FileParseException() );
 			
 			m_surfaces[i].pVertices.push_back( &m_vertices[iVtx] );
 			m_surfaces[i].textureCoords.push_back( LevelTextureCoords(u, v) );

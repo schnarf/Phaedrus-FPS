@@ -40,6 +40,7 @@ enum Error {
 };
 
 #include "common_checked_type.h"
+#include "common_exception.h"
 
 #ifdef _DEBUG
 	#include <iostream>

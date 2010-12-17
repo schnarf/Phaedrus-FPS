@@ -40,6 +40,7 @@ FILE(GLOB phaedrus_sources
 	*.cpp
 	common.cpp
 	common.h
+	common_exception.h
 	Math/*.cpp
 	Math/*.h
 	Render/*.cpp

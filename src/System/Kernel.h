@@ -58,6 +58,10 @@ namespace System {
 		
 		//! Our world
 		shared_ptr<World::World> m_pWorld;
+
+		//! Stops our kernel with a fatal error
+		void die( const string& strError );
+
 	}; // end class Kernel
 
 } // end namespace System
