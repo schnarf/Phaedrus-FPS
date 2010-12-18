@@ -22,9 +22,6 @@ namespace World {
 		//! Free resources
 		~Texture();
 		
-		//! Get this texture's filename
-		inline string GetFilename() const { return m_strFilename; }
-		
 		//! Get this texture's id
 		inline GLuint GetID() const { return m_id; }
 		
