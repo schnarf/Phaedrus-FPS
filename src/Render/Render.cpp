@@ -23,20 +23,10 @@
 //==================================================
 //! Initialize the task
 //==================================================
-Render::Render::Render( System::Kernel* pKernel ) : System::Task("Render", pKernel, false) {
-}
+Render::Render::Render( System::Kernel* pKernel ) :
+	m_pKernel(pKernel),
+	m_uLastTimeslice(0) {
 
-
-//==================================================
-//! Deinitialize the task
-//==================================================
-Render::Render::~Render() {
-}
-
-//==================================================
-//! Called whenever the thread is started
-//==================================================
-void Render::Render::init() {
 	// Initialize timeslice to zero
 	m_uLastTimeslice= 0;
 
@@ -45,8 +35,8 @@ void Render::Render::init() {
 	uint uWidth= 1152;
 	uint uHeight= 864;
 
-	// Get our rendering window
-	m_pWindow= new System::Window( "Test", uWidth, uHeight, System::Window::WINDOW_OPENGL, this );
+	// Create our rendering window
+	m_pWindow.reset( new System::Window("Test", uWidth, uHeight, System::Window::WINDOW_OPENGL, this, m_pKernel->GetInput()) );
 	
 	// Set up OpenGL
 	glEnable( GL_TEXTURE_2D );
@@ -69,25 +59,23 @@ void Render::Render::init() {
 	glMatrixMode( GL_PROJECTION );
 	glLoadIdentity();
 	gluPerspective( 60.0, (float)uWidth/(float)uHeight, 1.0f, 1024.0f );
-}
+
+} // end Render::Render()
 
 
 //==================================================
-//! Called when the thread is stopped
+//! Deinitialize the task
 //==================================================
-void Render::Render::deinit() {
-	delete m_pWindow;
-	
-	// Shut down SDL
+Render::Render::~Render() {
+	m_pWindow.reset();
 	SDL_Quit();
 }
 
-
 //==================================================
-//! Our main loop
+//! Renders our timeslice
 //==================================================
-void Render::Render::process() {
-	if( !GetKernel()->IsRunning() ) return;
+void Render::Render::Process() {
+	if( !m_pKernel->IsRunning() ) return;
 	
 	// Begin our timeslice
 	uint64 uStartTicks= System::GetTickCountMillis();
@@ -102,12 +90,12 @@ void Render::Render::process() {
 	glLoadIdentity();
 	gluPerspective( 60.0, 1.3333333333f, 1.0f, 1024.0f );
 	Math::Vector eyepos, lookvec;
-	eyepos= GetKernel()->GetWorld()->GetLocalPlayerEntity()->GetEyePosition();
-	lookvec= GetKernel()->GetWorld()->GetLocalPlayerEntity()->GetLookVector() + eyepos;
+	eyepos= m_pKernel->GetWorld()->GetLocalPlayerEntity()->GetEyePosition();
+	lookvec= m_pKernel->GetWorld()->GetLocalPlayerEntity()->GetLookVector() + eyepos;
 	gluLookAt( eyepos.X(), eyepos.Y(), eyepos.Z(), lookvec.X(), lookvec.Y(), lookvec.Z(), 0.0, 1.0, 0.0 );
 	
 	// Draw the level
-	GetKernel()->GetWorld()->GetLevel()->Render();
+	m_pKernel->GetWorld()->GetLevel()->Render();
 	
 	// Draw entities
 	
@@ -119,13 +107,4 @@ void Render::Render::process() {
 	uint64 uEndTicks= System::GetTickCountMillis();
 	assert( uEndTicks >= uStartTicks );
 	m_uLastTimeslice= uEndTicks - uStartTicks;
-}
-
-
-//==================================================
-//! Our message processing function
-//==================================================
-void Render::Render::processMessages() {
-	m_pWindow->PollEvents();
-}
-
+} // end Render::Process()

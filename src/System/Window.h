@@ -14,13 +14,13 @@ namespace System {
 	class Window {
 	public:
 		enum {
-			WINDOW_OPENGL= 1,
-			WINDOW_FULLSCREEN= 2,
+			WINDOW_OPENGL= 1 << 0,
+			WINDOW_FULLSCREEN= 1 << 1,
 			NUM_WINDOW_FLAGS
 		};
 		
 		//! Instantiate the window
-		Window( string strTitle, uint uWidth, uint uHeight, uint eFlags, Render::Render* pRender );
+		Window( string strTitle, uint uWidth, uint uHeight, uint eFlags, Render::Render* pRender, System::Input* pInput );
 		//! De-initialize the window
 		~Window();
 		

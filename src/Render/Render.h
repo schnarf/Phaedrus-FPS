@@ -5,41 +5,35 @@
 
 #pragma once
 
-#include "System/Task.h"
-
 namespace System { class Window; class Kernel; }
 
 namespace Render {
 
-	class Render : public System::Task {
+	class Render {
 		friend class System::Kernel;
 	public:
-		//! Initialize the task
+		//! Initialize
 		Render( System::Kernel* pKernel );
 		//! Deinitialize the task
 		~Render();
+
+		//! Renders our timeslice
+		void Process();
+		
+		//! Gets our window
+		System::Window* GetWindow() { return m_pWindow.get(); }
 		
 		//! Get the last time slice in milliseconds
-		uint64 GetLastTimeslice() const;
+		inline uint64 GetLastTimeslice() const { return m_uLastTimeslice; }
 		
-	protected:
-		//! Called whenever the thread is started
-		void init();
-		//! Called when the thread is stopped
-		void deinit();
-		//! Our main loop
-		void process();
-		//! Our message processing function
-		void processMessages();
+	private:
+		System::Kernel* m_pKernel;			//!< Pointer to our kernel
 	
 		//! Our rendering window
-		System::Window* m_pWindow;
+		scoped_ptr<System::Window> m_pWindow;
 		
 		//! The last time slice, in milliseconds
 		uint64 m_uLastTimeslice;
 	}; // end class Render
 
 } // end namespace Render
-
-//! Get the last time slice in milliseconds
-inline uint64 Render::Render::GetLastTimeslice() const { return m_uLastTimeslice; }

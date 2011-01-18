@@ -9,40 +9,25 @@
 using Math::Vector;
 
 //==================================================
-//! Initialize the task
+//! Initialize
 //==================================================
 World::WorldUpdater::WorldUpdater( System::Kernel* pKernel ) :
-	System::Task( "World Updater", pKernel, false ),
-	m_uLastTimestep(0) {
-}
+	m_pKernel(pKernel),
+	m_uLastTimestep(System::GetTickCountMillis()) {
+} // end WorldUpdater::WorldUpdater()
 
 
 //==================================================
-//! Called whenever the thread is started
+//! Update the world's state
 //==================================================
-void World::WorldUpdater::init() {
-	// Initialize the timestep
-	m_uLastTimestep= System::GetTickCountMillis();
-}
-
-//==================================================
-//! Called when the thread is stopped
-//==================================================
-void World::WorldUpdater::deinit() {
-}
-
-
-//==================================================
-//! Our main loop
-//==================================================
-void World::WorldUpdater::process() {
-	World* pWorld= GetKernel()->GetWorld();
+void World::WorldUpdater::Process() {
+	World* pWorld= m_pKernel->GetWorld();
 
 	// If the world is not loaded, do nothing
 	if( !pWorld->IsLoaded() ) return;
 	
 	// Calculate timestep
-	uint64 uDt= GetKernel()->GetTaskRender()->GetLastTimeslice();
+	uint64 uDt= m_pKernel->GetRender()->GetLastTimeslice();
 	// If our timestep is zero, we do nothing for now
 	if( uDt == 0 ) return;
 	
@@ -73,13 +58,6 @@ void World::WorldUpdater::process() {
 		(*it)->SetAngularVelocity( angvel );
 		(*it)->SetRotation( rot );
 	}
-}
-
-
-//==================================================
-//! Our message processing function
-//==================================================
-void World::WorldUpdater::processMessages() {
 }
 
 

@@ -6,28 +6,22 @@
 
 #pragma once
 
-#include "System/Task.h"
 namespace System { class Kernel; }
 
 namespace World {
 
-	class WorldUpdater : public System::Task {
+	class WorldUpdater {
 	public:
-		//! Initialize the task
+		//! Initialize
 		WorldUpdater( System::Kernel* pKernel );
-		
-	protected:
-		//! Called whenever the thread is started
-		void init();
-		//! Called when the thread is stopped
-		void deinit();
-		//! Our main loop
-		void process();
-		//! Our message processing function
-		void processMessages();
+
+		//! Update the world's state
+		void Process();
 		
 	private:
-		//! The timestep when we last updates
+		System::Kernel* m_pKernel;			//!< Pointer to our kernel
+
+		//! The timestep when we last updated
 		uint64 m_uLastTimestep;
 		
 		//! Do physics

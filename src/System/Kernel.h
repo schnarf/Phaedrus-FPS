@@ -12,36 +12,32 @@ namespace VM { class VM; }
 
 namespace System {
 
-	class Task; class Window; class Input; class VFS;
+	class Window; class Input; class VFS;
 
 	class Kernel {
-		friend class Task;
 	public:
 		//! Constructor, initializes the kernel if necessary
 		Kernel();
 		//! Destructor, deinitializes the kernel
 		~Kernel();
-
-		//! Starts the kernel's main loop
-		void Start();
-		//! Stops the kernel's main loop
-		void Stop();
 		
+		//! Starts the kernel running
+		void Start();
+		//! Stops the kernel from running
+		void Stop();
+		//! Returns whether the kernel is running
 		inline bool IsRunning() const { return m_bRunning; }
 
 		System::VFS* GetVFS() { return m_pVFS.get(); }
 		VM::VM* GetVM() { return m_pVM.get(); }
 		World::ResourceManager* GetResourceManager() { return m_pResourceManager.get(); }
 		
-		Render::Render* GetTaskRender() const { return m_pRender.get(); }
-		System::Input* GetTaskInput() const { return m_pInput.get(); }
-		World::WorldUpdater* GetTaskWorldUpdater() const { return m_pWorldUpdater.get(); }
+		Render::Render* GetRender() const { return m_pRender.get(); }
+		System::Input* GetInput() const { return m_pInput.get(); }
+		World::WorldUpdater* GetWorldUpdater() const { return m_pWorldUpdater.get(); }
 		World::World* GetWorld() const { return m_pWorld.get(); }
 		
-	private:
-		//! Adds a task to the kernel, called by the task's constructor
-		void addTask( Task* pTask );
-		
+	private:		
 		//! Our kernel's main loop
 		void run();
 		
@@ -82,9 +78,6 @@ namespace System {
 		//! Our world
 		shared_ptr<World::World> m_pWorld;
 		
-		//! The kernel's tasks
-		vector<Task*> m_pTasks;
-
 		//! Stops our kernel with a fatal error
 		void die( const string& strError );
 

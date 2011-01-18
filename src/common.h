@@ -17,14 +17,19 @@ using namespace std;
 
 // TODO: Don't need boost shared_ptr if we have tr1 or c++0x
 //#include <boost/shared_ptr.hpp>
+#include <boost/scoped_ptr.hpp>
+using boost::scoped_ptr;
 #include <cassert>
 
 #include <boost/thread/thread.hpp>
 #include <boost/thread/mutex.hpp>
+#include <boost/thread/condition.hpp>
 
 typedef boost::mutex Mutex;
 typedef boost::mutex::scoped_lock ScopedLock;
 typedef boost::thread::id ThreadID;
+typedef boost::condition_variable ConditionVariable;
+typedef boost::thread Thread;
 
 typedef unsigned int uint;
 typedef unsigned int uint32;

@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include "System/Task.h"
 #include "System/Window.h"
 
 namespace System {
@@ -24,13 +23,16 @@ namespace System {
 		NUM_INPUT_KEYS
 	}; // end enum InputKeys
 	
-	class Input : public Task {
+	class Input {
 		friend class System::Window;
 	public:
 		//! Initialize the task
 		Input( Kernel* pKernel );
 		//! Deinitialize the task
 		~Input();
+
+		//! Processes our events
+		void Process();
 		
 		enum EventType {
 			EVENT_KEY_DOWN,
@@ -44,23 +46,12 @@ namespace System {
 			uint32 data;
 		}; // end struct Event
 		
-		//! A task can be notified of an event
-		void RegisterEvent( Task* pTask, EventType type, uint32 message );
-		
 		//! Get the state of a given key, true if down
 		bool GetKeyState( InputKeys key );
 		
-	protected:
-		//! Called whenever the thread is started
-		void init();
-		//! Called when the thread is stopped
-		void deinit();
-		//! Our main loop
-		void process();
-		//! Our message processing function
-		void processMessages();
-		
 	private:
+		Kernel* m_pKernel;			//!< Pointer to our kernel
+
 		//! Receive events from the window
 		void postEvent( const SDL_Event* event );
 		//! Our system event queue

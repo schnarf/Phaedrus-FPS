@@ -10,14 +10,11 @@ System::Input* System::Window::m_pInput= NULL;
 //==================================================
 //! Instantiate the window
 //==================================================
-System::Window::Window( string strTitle, uint uWidth, uint uHeight, uint eFlags, Render::Render* pRender ) :
+System::Window::Window( string strTitle, uint uWidth, uint uHeight, uint eFlags, Render::Render* pRender, System::Input* pInput ) :
 	m_uWidth(uWidth),
 	m_uHeight(uHeight),
 	m_eFlags(eFlags),
-	m_pRender( pRender ) {
-	
-	// We need to be in the rendering thread
-	assert( m_pRender->GetThreadID() == boost::this_thread::get_id() );
+	m_pRender(pRender)  {
 	
 	m_eFlags= WINDOW_OPENGL;
 	
@@ -46,10 +43,11 @@ System::Window::Window( string strTitle, uint uWidth, uint uHeight, uint eFlags,
 		
 		// Set the title
 		SetTitle( strTitle );
-	}
-	
-	m_pInput= pRender->GetKernel()->GetTaskInput();
-}
+	} // end if opengl
+
+	m_pInput= pInput;
+
+} // end Window::Window()
 
 
 //==================================================
@@ -65,20 +63,16 @@ void System::Window::SetTitle( const string& strTitle ) {
 	// Now set the new title and old icon
 	m_strTitle= strTitle;
 	SDL_WM_SetCaption( m_strTitle.c_str(), c_icon );
-}
+} // end WIndow::SetTItle()
 
 
 //==================================================
 //! Swap the buffers for an OpenGL window
 //==================================================
-void System::Window::SwapBuffers() const {
-	// We need to be in the rendering thread
-	//assert( reinterpret_cast<System::Task*>(System::Kernel::Get()->GetTaskRender())->GetThreadID() == boost::this_thread::get_id() );
-	assert( m_pRender->GetThreadID() == boost::this_thread::get_id() );
-	
+void System::Window::SwapBuffers() const {	
 	SDL_GL_SwapBuffers();
 	SDL_Flip( m_pSDLSurface );
-}
+} // end Window::FlipBuffers()
 
 
 //==================================================
@@ -86,18 +80,15 @@ void System::Window::SwapBuffers() const {
 //==================================================
 void System::Window::PollEvents() {
 	SDL_Event event;
-	
-	// We need to be in the rendering thread
-	//assert( m_pRender->GetThreadID() == boost::this_thread::get_id() );
 
 	while( SDL_PollEvent(&event) ) {
 		m_pInput->postEvent( &event );
 	}
-}
+} // end Window::PollEvents()
 
 //==================================================
 //! De-initialize the window
 //==================================================
 System::Window::~Window() {
 	
-}
+} // end Window::~Window()
