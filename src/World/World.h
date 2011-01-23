@@ -11,7 +11,7 @@
 
 namespace World {
 	
-	class Texture; class PlayerEntity; class Level;
+	class Texture; class Level; class PlayerEntity;
 	
 	class World {
 		friend class WorldUpdater;
@@ -19,26 +19,25 @@ namespace World {
 		//! Constructor
 		World();
 		//! Non-inline destructor
-		~World();
+		virtual ~World();
 		
 		//! Accessor for the local player
 		inline PlayerEntity* GetLocalPlayerEntity() const { return m_pLocalPlayer; }
-		
+
 		//! Is the world loaded?
 		inline bool IsLoaded() const { return m_bIsLoaded; }
 		
 		//! Accessor for level
 		Level* GetLevel() const { return m_pLevel.get(); }
 		
-		//! Spawn an entity at a given position
-		EntityRef SpawnEntity( EntityType type, const Math::Vector& pos );
+		//! Spawn an entity of given type
+		EntityRef SpawnEntity( EntityType type );
 		
 		//! Update positions, do physics, etc
 		void Tick( uint64 tickCount );
 		
 		//! Get an entity POINTER by ID (not reference)
-		Entity* GetEntity( EntityID id ) const;
-
+		Entity* GetEntity( EntityID id );
 	private:
 		//! Whether the world is loaded
 		bool m_bIsLoaded;

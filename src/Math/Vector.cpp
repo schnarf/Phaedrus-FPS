@@ -112,8 +112,6 @@ float Math::Vector::Length() const {
 //==================================================
 //! Normalize the vector
 //==================================================
-Math::Vector& Math::Vector::Normalize() {
+void Math::Vector::Normalize() {
 	*this/= Length();
-	
-	return *this;
 }

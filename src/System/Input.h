@@ -9,8 +9,6 @@
 
 namespace System {
 
-	class Kernel;
-
 	enum InputKeys {
 		INPUT_LEFT,
 		INPUT_RIGHT,
@@ -20,6 +18,8 @@ namespace System {
 		INPUT_A,
 		INPUT_S,
 		INPUT_D,
+		INPUT_SHIFT,
+		INPUT_CTRL,
 		NUM_INPUT_KEYS
 	}; // end enum InputKeys
 	
@@ -27,7 +27,7 @@ namespace System {
 		friend class System::Window;
 	public:
 		//! Initialize the task
-		Input( Kernel* pKernel );
+		Input();
 		//! Deinitialize the task
 		~Input();
 
@@ -47,22 +47,20 @@ namespace System {
 		}; // end struct Event
 		
 		//! Get the state of a given key, true if down
-		bool GetKeyState( InputKeys key );
-		
+		bool IsKeyDown( InputKeys key ) const;
+		//! Gets whether we have received a quit signal
+		bool IsQuit() const { return m_bQuit; }
 	private:
-		Kernel* m_pKernel;			//!< Pointer to our kernel
-
 		//! Receive events from the window
 		void postEvent( const SDL_Event* event );
 		//! Our system event queue
 		deque<SDL_Event> m_queueEvents;
-		//! Our event queue mutex
-		Mutex m_mutexEvents;
 		
 		//! The key states
 		vector<bool> m_keyStates;
-		//! The mutex for key states
-		Mutex m_mutexKeyStates;
+
+		//! Set to true when we receive the signal to quit
+		bool m_bQuit;
 		
 	}; // end class Input
 

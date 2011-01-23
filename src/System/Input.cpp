@@ -2,13 +2,12 @@
 #include "System/Input.h"
 #include "System/Kernel.h"
 
-
 //==================================================
 //! Initialize the task
 //==================================================
-System::Input::Input( Kernel* pKernel ) :
-	m_pKernel(pKernel),
-	m_keyStates(NUM_INPUT_KEYS, false) {
+System::Input::Input() :
+	m_keyStates(NUM_INPUT_KEYS, false),
+	m_bQuit(false) {
 } // end Input::Input()
 
 
@@ -37,9 +36,8 @@ void System::Input::Process() {
 		break;
 		
 		case SDL_QUIT: {
-			// Tell the kernel to quit
-			m_pKernel->Stop();
-			break;
+			m_bQuit= true;
+		break;
 		} // end case quit
 		
 		default:
@@ -57,13 +55,15 @@ void System::Input::Process() {
 	m_keyStates[INPUT_A]= keystate[SDLK_a];
 	m_keyStates[INPUT_S]= keystate[SDLK_s];
 	m_keyStates[INPUT_D]= keystate[SDLK_d];
+	m_keyStates[INPUT_SHIFT]= keystate[SDLK_LSHIFT] || keystate[SDLK_RSHIFT];
+	m_keyStates[INPUT_CTRL]= keystate[SDLK_LCTRL] || keystate[SDLK_RCTRL];
 } // end Input::Process()
 
 
 //==================================================
 //! Get the state of a given key, true if down
 //==================================================
-bool System::Input::GetKeyState( InputKeys key ) {
+bool System::Input::IsKeyDown( InputKeys key ) const {
 	assert( key < NUM_INPUT_KEYS );
 	return m_keyStates[key];
 } // end Input::GetKeyState()

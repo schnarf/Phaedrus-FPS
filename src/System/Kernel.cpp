@@ -16,15 +16,13 @@
 System::Kernel::Kernel() :
 	m_kernelSentry(this),
 	m_pVFS(new System::VFS),
-	m_pVM(new VM::VM),
 	m_pResourceManager(new World::ResourceManager),
+	m_pInput(new System::Input),
+	m_pVM(new VM::VM),
 	m_bRunning(false) {
 
 	m_kernelSentry.Register();
 	
-	// Must create input first, because the input object gets passed to the window
-	// that the rendering engine creates.
-	m_pInput.reset( new System::Input(this) );
 	m_pRender.reset( new Render::Render(this) );
 	m_pWorldUpdater.reset( new World::WorldUpdater(this) );
 
@@ -59,6 +57,9 @@ void System::Kernel::run() {
 		GetInput()->Process();
 		GetWorldUpdater()->Process();
 		GetRender()->Process();
+
+		// Check for the quit signal
+		if( GetInput()->IsQuit() ) Stop();
 	}; // end while running
 	
 } // end Kernel::run()
@@ -66,7 +67,7 @@ void System::Kernel::run() {
 
 //! Stops our kernel with a fatal error
 void System::Kernel::die( const string& strError ) {
-	g_pVM->Call<void>( "PrintError", (string("Kernel::die():") + strError).c_str() );
+//	g_pVM->Call<void>( "PrintError", (string("Kernel::die():") + strError).c_str() );
 	Stop();
 } // end Kernel::die()
 
@@ -87,6 +88,10 @@ void System::Kernel::KernelSentry::Register() {
 	g_pResourceManager= m_pKernel->GetResourceManager();
 	assert( g_pVM == NULL );
 	g_pVM= m_pKernel->GetVM();
+	assert( g_pInput == NULL );
+	g_pInput= m_pKernel->GetInput();
+
+	g_pVM->RegisterGlobals();
 } // end KernelSentry::Register()
 
 //! Unregister the kernel's globals
@@ -97,4 +102,6 @@ System::Kernel::KernelSentry::~KernelSentry() {
 	g_pResourceManager= NULL;
 	assert( g_pVFS == m_pKernel->GetVFS() );
 	g_pVFS= NULL;
+	assert( g_pInput == m_pKernel->GetInput() );
+	g_pInput= NULL;
 } // end KernelSentry::~KernelSentry()

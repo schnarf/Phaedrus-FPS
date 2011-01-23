@@ -24,6 +24,7 @@ using boost::scoped_ptr;
 #include <boost/thread/thread.hpp>
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/condition.hpp>
+#include <boost/python.hpp>
 
 typedef boost::mutex Mutex;
 typedef boost::mutex::scoped_lock ScopedLock;

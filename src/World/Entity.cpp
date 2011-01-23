@@ -1,28 +1,17 @@
 #include "common.h"
 #include "World/Entity.h"
 #include "World/PlayerEntity.h"
-
-namespace {
-	const uint DEFAULT_FLAGS= World::ENTITY_FLAG_VISIBLE
-						   | World::ENTITY_FLAG_COLLIDABLE
-						   | World::ENTITY_FLAG_PHYSICS;
-}; // end anonymous namespace
+#include "World/PhysicsBase.h"
 
 //==================================================
-//! Entity constructor
+//! Entity base class constructor, initialize with components
 //==================================================
-World::Entity::Entity( World::EntityType type, EntityID id ) :
-	m_type(type),
+World::Entity::Entity( EntityID id, PhysicsBase* pPhysics ) :
 	m_id(id),
-	m_flags(DEFAULT_FLAGS) {
-}
+	m_pPhysics(pPhysics) {
+} // end Entity::Entity()
 
-//==================================================
-//! Inherited class cast to player
-//==================================================
-World::PlayerEntity* World::Entity::ToPlayer() {
-	assert( m_type == ENTITY_PLAYER );
-	if( m_type != ENTITY_PLAYER ) return NULL;
-	
-	return reinterpret_cast<World::PlayerEntity*>(this);
-}
+
+//! Virtual destructor for polymorphic deletion
+World::Entity::~Entity() {
+} // end Entity::~Entity()

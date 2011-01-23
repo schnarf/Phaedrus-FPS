@@ -50,7 +50,7 @@ namespace Math {
 		float Length() const;
 		
 		//! Normalize the vector
-		Math::Vector& Normalize();
+		void Normalize();
 		
 		//! Public members
 		float x, y, z;

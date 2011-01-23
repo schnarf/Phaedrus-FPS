@@ -63,14 +63,13 @@ namespace System {
 		shared_ptr<System::VFS> m_pVFS;
 		//! The resource manager
 		shared_ptr<World::ResourceManager> m_pResourceManager;
+		//! Our input task
+		shared_ptr<System::Input> m_pInput;
 		//! The virtual machine
 		shared_ptr<VM::VM> m_pVM;
 
 		//! Our rendering task
 		shared_ptr<Render::Render> m_pRender;
-		
-		//! Our input task
-		shared_ptr<System::Input> m_pInput;
 		
 		//! Our world updater task
 		shared_ptr<World::WorldUpdater> m_pWorldUpdater;

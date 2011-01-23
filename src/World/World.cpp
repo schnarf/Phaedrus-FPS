@@ -9,6 +9,7 @@
 #include "System/VFS.h"
 #include "VM/VM.h"
 #include <iostream>
+#include "World/PhysicsBase.h"
 
 using Math::Vector;
 
@@ -24,11 +25,23 @@ World::World::World() :
 		m_pLevel.reset( new Level("test.map") );
 	} catch( const FileIOException& e ) {
 		// If we failed to load the level, log the error and exit
-		g_pVM->Call<void>( "PrintError", "Encountered a file IO error trying to load the level." );
+		//g_pVM->Call<void>( "PrintError", "Encountered a file IO error trying to load the level." );
 		return;
 	}
+
+	// Load and call the startup script, this can throw
+	try {
+		g_pVM->LoadScript( "WorldStartup.py" );
+	} catch( const FileIOException& e ) {
+		// If we failed to load the world startup script, just print a message
+		//g_pVM->Call<void>( "PrintError", "Encountered a file IO error trying to load the world startup script" );
+		g_pVM->Execute( "PrintError( 'Encountered a file IO error trying to load the world startup script' )\n" );
+		return;
+	}
+
 	// Spawn things
-	m_pLocalPlayer= SpawnEntity( ENTITY_PLAYER, Math::Vector(0.0f, 0.0f, 0.0f) )->ToPlayer();
+	m_pLocalPlayer= static_cast<PlayerEntity*>(SpawnEntity(ENTITY_PLAYER).get());
+	m_pLocalPlayer->GetPhysics()->SetPosition( Math::Vector(0, 0, 0) );
 	
 	// Set timing
 	m_oldTickCount= System::GetTickCountMillis();
@@ -37,17 +50,9 @@ World::World::World() :
 	
 	// Register with VM
 	g_pVM->SetWorld( this );
-	
-	// Load and call the startup script, this can throw
-	try {
-		g_pVM->LoadScript( "WorldStartup.lua" );
-	} catch( const FileIOException& e ) {
-		// If we failed to load the world startup script, just print a message
-		g_pVM->Call<void>( "PrintError", "Encountered a file IO error trying to load the world startup script" );
-		return;
-	}
-	
-	g_pVM->Call<void>( "WorldStartup" );
+
+	g_pVM->Execute( "WorldStartup()\n" );
+
 }
 
 
@@ -64,33 +69,34 @@ World::World::~World() {
 
 
 //==================================================
-//! Spawn an entity at a given position
+//! Spawn an entity
 //==================================================
-World::EntityRef World::World::SpawnEntity( EntityType type, const Math::Vector& pos ) {
+World::EntityRef World::World::SpawnEntity( EntityType type ) {
 	EntityRef pRet;
 
 	EntityID id= m_entities.size();
 	
 	switch( type ) {
-	case ENTITY_PLAYER:
-		m_entities.push_back( EntityRef(new PlayerEntity(id)) );
+	case ENTITY_PLAYER: {
+		m_entities.push_back( PlayerEntity::Create(id) );
 		pRet= m_entities.back();
-	};
-	
-	// Set position
-	pRet->SetPosition( pos );
+		break;
+	} // end case player
+
+	default: assert(false);
+	} // end switch type
 	
 	return pRet;
-}
+} // end World::GetEntity()
 
 //==================================================
 //! Get an entity pointer by ID
 //==================================================
-World::Entity* World::World::GetEntity( EntityID id ) const {
+World::Entity* World::World::GetEntity( EntityID id ) {
 	if( id >= m_entities.size() ) return NULL;
 	
 	return m_entities[id].get();
-}
+} // end World::GetEntity()
 
 
 //==================================================
